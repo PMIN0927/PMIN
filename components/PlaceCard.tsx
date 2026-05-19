@@ -91,9 +91,19 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
 }
 
 function getPlaceVisual(place: Place) {
-  const text = [place.role, place.category, place.detailCategory, place.description, place.name, ...(place.coreKeywords || [])].join(" ");
+  const role = String(place.role || "");
+  const text = [place.category, place.detailCategory, place.description, place.name, ...(place.coreKeywords || [])].join(" ");
 
-  if (/카페|커피|디저트|베이커리|빙수|찻집/.test(text)) {
+  if (role.includes("식사") || /샤브|국밥|한식|고기|곱창|라멘|우동|초밥|스시|파스타|피자|돈까스|돈카츠|쌀국수|중식|분식|낙지|칼국수|밀면|버거|치킨|훠궈|양꼬치|규카츠/.test(text)) {
+    return {
+      emoji: pickMealEmoji(text),
+      label: "MEAL",
+      copy: "데이트의 시작은 든든하게",
+      gradient: "from-rose-300 to-orange-300"
+    };
+  }
+
+  if (role.includes("카페") || /카페|커피|디저트|베이커리|빙수|찻집/.test(text)) {
     return {
       emoji: "☕",
       label: "CAFE",
@@ -102,7 +112,7 @@ function getPlaceVisual(place: Place) {
     };
   }
 
-  if (/술|이자카야|바|포차|하이볼|맥주|와인|주점|야키토리/.test(text)) {
+  if (role.includes("술") || /술|이자카야|바|포차|하이볼|맥주|와인|주점|야키토리|오뎅|꼬치/.test(text)) {
     return {
       emoji: "🍻",
       label: "DRINK",
@@ -111,21 +121,12 @@ function getPlaceVisual(place: Place) {
     };
   }
 
-  if (/사진|포토|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|소품/.test(text)) {
+  if (role.includes("중간경유지") || /사진|포토|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|소품/.test(text)) {
     return {
       emoji: "📸",
       label: "PLAY",
       copy: "중간에 들르면 좋은 가벼운 재미",
       gradient: "from-sky-300 to-violet-400"
-    };
-  }
-
-  if (/샤브|국밥|한식|고기|곱창|라멘|초밥|파스타|피자|돈까스|쌀국수|중식|분식/.test(text)) {
-    return {
-      emoji: "🍽️",
-      label: "MEAL",
-      copy: "데이트의 시작은 든든하게",
-      gradient: "from-rose-300 to-orange-300"
     };
   }
 
@@ -135,4 +136,15 @@ function getPlaceVisual(place: Place) {
     copy: "오늘 코스에 어울리는 후보",
     gradient: "from-rose-300 to-pink-400"
   };
+}
+
+function pickMealEmoji(text: string) {
+  if (/초밥|스시/.test(text)) return "🍣";
+  if (/라멘|우동|소바|쌀국수|칼국수|밀면/.test(text)) return "🍜";
+  if (/고기|곱창|막창|구이|규카츠/.test(text)) return "🥩";
+  if (/파스타|피자|양식/.test(text)) return "🍝";
+  if (/버거|치킨/.test(text)) return "🍔";
+  if (/샤브|훠궈/.test(text)) return "🥘";
+  if (/국밥|한식|순두부|백반/.test(text)) return "🍚";
+  return "🍽️";
 }
