@@ -81,7 +81,7 @@
     "menu1": "후라이드치킨",
     "menu2": "양념치킨",
     "menu3": "치맥/사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/BBQ%EC%B9%98%ED%82%A8%20%EB%B6%80%EC%82%B0%EC%...",
+    "naverMapUrl": "https://map.naver.com/p/search/BBQ%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%8A%A4%ED%83%80%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/410707086",
     "openingHours": "매일 11:00 ~ 03:00",
     "holiday": "없음",
@@ -140,7 +140,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "864317466",
@@ -152,7 +153,7 @@
     "menu1": "고기구이",
     "menu2": "식사 메뉴",
     "menu3": "주류",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B0%91%EC%A7%84%EC%A7%91%20%EC%84%9C%EB%A9%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B0%91%EC%A7%84%EC%A7%91%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/864317466",
     "openingHours": "17시~24시",
     "holiday": "없음",
@@ -217,7 +218,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "8738686",
@@ -229,7 +231,7 @@
     "menu1": "낙지볶음",
     "menu2": "연포탕",
     "menu3": "해물요리",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EB%AF%B8%EC%A7%91%20%EC%84%9C%EB%A9%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EB%AF%B8%EC%A7%91%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/8738686",
     "openingHours": "매일 9~02시(다음날) 화요일9~24시까지",
     "holiday": "없음",
@@ -284,7 +286,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "5-고생끝소금구이 서면본점",
@@ -296,7 +299,7 @@
     "menu1": "소금구이",
     "menu2": "돼지고기/소고기구이",
     "menu3": "식사 메뉴",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EC%83%9D%EB%81%9D%EC%86%8C%EA%B8%88%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EC%83%9D%EB%81%9D%EC%86%8C%EA%B8%88%EA%B5%AC%EC%9D%B4%20%EC%84%9C%EB%A9%B4%EB%B3%B8%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "",
     "openingHours": "24시간 영업",
     "holiday": "없음",
@@ -360,7 +363,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "9866198",
@@ -448,7 +452,7 @@
     "menu1": "규카츠",
     "menu2": "카레",
     "menu3": "일식 사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B7%9C%EC%B9%B4%EC%B8%A0%EC%A0%95%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B7%9C%EC%B9%B4%EC%B8%A0%EC%A0%95%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/58068664",
     "openingHours": "11시30분~21시",
     "holiday": "없음",
@@ -517,7 +521,8 @@
     "estimatedPriceCouple": "20000~34000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "11495457",
@@ -529,7 +534,7 @@
     "menu1": "대표메뉴 확인필요",
     "menu2": "식사 메뉴",
     "menu3": "확인필요",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B8%B0%EC%9E%A5%EC%86%90%EC%B9%BC%EA%B5%AD%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B8%B0%EC%9E%A5%EC%86%90%EC%B9%BC%EA%B5%AD%EC%88%98%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/11495457",
     "openingHours": "9~20시",
     "holiday": "없음",
@@ -588,7 +593,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "192964575",
@@ -600,7 +606,7 @@
     "menu1": "꽃살/고기구이",
     "menu2": "식사 메뉴",
     "menu3": "주류",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%BD%83%EC%82%B4%EC%A7%91%20%EC%A0%84%ED%8F%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%BD%83%EC%82%B4%EC%A7%91%20%EC%A0%84%ED%8F%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/192964575",
     "openingHours": "월화수목금일: 12시~22시                          토:12시~22시30분",
     "holiday": "없음",
@@ -658,7 +664,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "713112284",
@@ -670,7 +677,7 @@
     "menu1": "초밥",
     "menu2": "사시미",
     "menu3": "우동/덮밥",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%82%B4%EA%B3%B5%EC%B4%88%EB%B0%A5%20%EB%B3%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%82%B4%EA%B3%B5%EC%B4%88%EB%B0%A5%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/713112284",
     "openingHours": "10시 40분~다음날 04시",
     "holiday": "없음",
@@ -748,7 +755,8 @@
     "estimatedPriceCouple": "20000~34000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1080156002",
@@ -816,7 +824,7 @@
     "menu1": "대창",
     "menu2": "곱창",
     "menu3": "막창/볶음밥",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8C%80%EC%B0%BD%EC%9D%B8%EC%83%9D%20%EC%A0%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8C%80%EC%B0%BD%EC%9D%B8%EC%83%9D%20%EC%A0%84%ED%8F%AC%EB%8F%99%EC%A7%81%EC%98%81%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1311011144",
     "openingHours": "17시~02시",
     "holiday": "없음",
@@ -881,7 +889,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "18637233",
@@ -893,7 +902,7 @@
     "menu1": "쌀국수",
     "menu2": "분짜/볶음면",
     "menu3": "월남쌈/사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%94%ED%8F%AC%20%EC%84%9C%EB%A9%B4%EC%9D%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%94%ED%8F%AC%20%EC%84%9C%EB%A9%B4%EC%9D%BC%EB%B2%88%EA%B0%80%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/18637233",
     "openingHours": "매일 11:30 ~ 21:40",
     "holiday": "없음",
@@ -949,7 +958,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "8267341",
@@ -961,7 +971,7 @@
     "menu1": "피자",
     "menu2": "파스타",
     "menu3": "사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8F%84%EB%AF%B8%EB%85%B8%ED%94%BC%EC%9E%90%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8F%84%EB%AF%B8%EB%85%B8%ED%94%BC%EC%9E%90%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/8267341",
     "openingHours": "11시~21시30분",
     "holiday": "없음",
@@ -1019,7 +1029,8 @@
     "estimatedPriceCouple": "32000~60000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "15-도화식당 부산 서면 본점",
@@ -1031,7 +1042,7 @@
     "menu1": "고기/한식 메뉴",
     "menu2": "식사 메뉴",
     "menu3": "주류",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8F%84%ED%99%94%EC%8B%9D%EB%8B%B9%20%EB%B6%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8F%84%ED%99%94%EC%8B%9D%EB%8B%B9%20%EB%B6%80%EC%82%B0%20%EC%84%9C%EB%A9%B4%20%EB%B3%B8%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "",
     "openingHours": "12시~24시",
     "holiday": "없음",
@@ -1096,7 +1107,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "304870260",
@@ -1263,7 +1275,7 @@
     "menu1": "샤브칼국수",
     "menu2": "버섯칼국수",
     "menu3": "볶음밥",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%93%B1%EC%B4%8C%EC%83%A4%EB%B8%8C%EC%B9%BC%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%93%B1%EC%B4%8C%EC%83%A4%EB%B8%8C%EC%B9%BC%EA%B5%AD%EC%88%98%20%EC%84%9C%EB%A9%B4%EC%A0%84%ED%8F%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/2139100797",
     "openingHours": "월화목금토일: 11시~21시",
     "holiday": "수",
@@ -1327,7 +1339,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "866981754",
@@ -1339,7 +1352,7 @@
     "menu1": "대표메뉴 확인필요",
     "menu2": "식사 메뉴",
     "menu3": "확인필요",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%94%94%ED%80%84%EB%A6%AC%ED%83%80%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%94%94%ED%80%84%EB%A6%AC%ED%83%80%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/866981754",
     "openingHours": "월~토 11:30 ~ 22:00",
     "holiday": "매주 일요일",
@@ -1385,7 +1398,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "10370757",
@@ -1542,7 +1556,7 @@
     "menu1": "쌀국수",
     "menu2": "분짜/볶음면",
     "menu3": "월남쌈/사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%8C%80%EA%B5%AD%EC%88%98%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%A7%9B%EC%9E%88%EB%8A%94%ED%95%98%EB%85%B8%EC%9D%B4%20%EC%84%9C%EB%A9%B4%EB%B3%B8%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/141665111",
     "openingHours": "월~금 11:00 ~ 15:00",
     "holiday": "매주 토,일요일",
@@ -1598,7 +1612,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "22018715",
@@ -1610,7 +1625,7 @@
     "menu1": "돈가스",
     "menu2": "치즈돈가스",
     "menu3": "우동/식사 메뉴",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B0%95%EC%84%B1%ED%99%98%EB%8F%88%EA%B9%8C%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B0%95%EC%84%B1%ED%99%98%EB%8F%88%EA%B9%8C%EC%8A%A4%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/22018715",
     "openingHours": "09시~20시",
     "holiday": "없음",
@@ -1673,7 +1688,8 @@
     "estimatedPriceCouple": "20000~34000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "16547926",
@@ -1685,7 +1701,7 @@
     "menu1": "후라이드치킨",
     "menu2": "양념치킨",
     "menu3": "치맥/사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%82%BC%EB%8D%95%ED%86%B5%EB%8B%AD%20%EB%B6%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%ED%86%B5%EB%8B%AD%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/16547926",
     "openingHours": "월수목금토일11:30~24:00 화요일 14:00~24:00",
     "holiday": "없음",
@@ -1744,7 +1760,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1103452675",
@@ -1756,7 +1773,7 @@
     "menu1": "돈가스",
     "menu2": "치즈돈가스",
     "menu3": "카레/우동",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%82%AC%EB%AA%A8%EB%8B%98%EB%8F%88%EA%B0%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%82%AC%EB%AA%A8%EB%8B%98%EB%8F%88%EA%B0%80%EC%8A%A4%20%EC%A5%AC%EB%8B%88%EC%96%B4%20%EC%A0%84%ED%8F%AC%EB%8F%99%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1103452675",
     "openingHours": "월화수목금토:11시~21시",
     "holiday": "일",
@@ -1819,7 +1836,8 @@
     "estimatedPriceCouple": "20000~34000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1715835149",
@@ -1831,7 +1849,7 @@
     "menu1": "맥주/칵테일",
     "menu2": "하이볼",
     "menu3": "펍 안주",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%82%BC%EB%B0%94%EB%A6%AC%20%EB%B6%80%EC%82%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%82%BC%EB%B0%94%EB%A6%AC%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1715835149",
     "openingHours": "화~목,일 16:30 ~ 02:00 금~토 16:00 ~ 03:00",
     "holiday": "매주 월요일",
@@ -1901,7 +1919,8 @@
     "estimatedPriceCouple": "40000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "514853126",
@@ -1913,7 +1932,7 @@
     "menu1": "샤브샤브",
     "menu2": "칼국수",
     "menu3": "죽/볶음밥",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%83%A4%EB%B8%8C%EB%93%9C%EB%A6%BC%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%83%A4%EB%B8%8C%EB%93%9C%EB%A6%BC%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/514853126",
     "openingHours": "월~토 11:00 ~ 21:30",
     "holiday": "매주 일요일",
@@ -1980,7 +1999,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "673528855",
@@ -1992,7 +2012,7 @@
     "menu1": "샤브샤브",
     "menu2": "월남쌈",
     "menu3": "칼국수/죽",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%83%A4%EB%B8%8C%EC%98%AC%20%EC%84%9C%EB%A9%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%83%A4%EB%B8%8C%EC%98%AC%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/673528855",
     "openingHours": "11시~21시",
     "holiday": "없음",
@@ -2057,7 +2077,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "423487180",
@@ -2069,7 +2090,7 @@
     "menu1": "곱창",
     "menu2": "대창",
     "menu3": "막창/볶음밥",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EA%B0%80%EC%9E%A5%EC%9D%B8%EA%B3%B1%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EA%B0%80%EC%9E%A5%EC%9D%B8%EA%B3%B1%EC%B0%BD%20%EB%B6%80%EC%82%B0%EC%A0%84%ED%8F%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/423487180",
     "openingHours": "화수목금토일:16시~24시",
     "holiday": "월",
@@ -2134,7 +2155,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "10116848",
@@ -2146,7 +2168,7 @@
     "menu1": "대표메뉴 확인필요",
     "menu2": "식사 메뉴",
     "menu3": "확인필요",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EA%B0%9C%EA%B8%88%EB%B0%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EA%B0%9C%EA%B8%88%EB%B0%80%EB%A9%B4%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/10116848",
     "openingHours": "5~8월 09:00~22:00 9~4월 -9:30~21:00",
     "holiday": "없음",
@@ -2206,7 +2228,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "2120931166",
@@ -2218,7 +2241,7 @@
     "menu1": "대표메뉴 확인필요",
     "menu2": "식사 메뉴",
     "menu3": "확인필요",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EC%8B%9C%EC%9E%A5%ED%86%B5%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%EC%8B%9C%EC%9E%A5%ED%86%B5%20%EB%A7%8C%EB%A7%8C%EC%A0%95%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/2120931166",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -2265,7 +2288,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "77052984",
@@ -2277,7 +2301,7 @@
     "menu1": "낙지볶음",
     "menu2": "연포탕",
     "menu3": "해물요리",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%ED%86%B5%ED%86%B5%EB%82%99%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EB%A9%B4%ED%86%B5%ED%86%B5%EB%82%99%EC%A7%80%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/77052984",
     "openingHours": "매일 11:00 ~ 22:00",
     "holiday": "매달 2,4 일요일",
@@ -2331,7 +2355,8 @@
     "estimatedPriceCouple": "확인필요",
     "priceTier": "확인필요",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "310316426",
@@ -2343,7 +2368,7 @@
     "menu1": "고기구이",
     "menu2": "식사 메뉴",
     "menu3": "주류",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9D%EC%95%94%EC%83%9D%EC%86%8C%EA%B8%88%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9D%EC%95%94%EC%83%9D%EC%86%8C%EA%B8%88%EA%B5%AC%EC%9D%B4%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/310316426",
     "openingHours": "16:30~01(다음날)",
     "holiday": "없음",
@@ -2403,7 +2428,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "23737126",
@@ -2415,7 +2441,7 @@
     "menu1": "돼지국밥",
     "menu2": "순대국밥",
     "menu3": "수육/사이드",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EB%8F%BC%EC%A7%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5%20%EC%84%9C%EB%A9%B4%EB%B3%B8%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/23737126",
     "openingHours": "매일 08:00 ~ 22:00",
     "holiday": "없음",
@@ -2487,7 +2513,8 @@
     "estimatedPriceCouple": "16000~28000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "324018140",
@@ -7566,7 +7593,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%A4%EB%B9%99%20%EC%84%9C%EB%A9%B4%EC%98%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%A4%EB%B9%99%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%98%81%EA%B4%91%EB%8F%84%EC%84%9C%EA%B1%B0%EB%A6%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/25118052",
     "openingHours": "10시~23시",
     "holiday": "없음",
@@ -7624,7 +7651,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "2095967326",
@@ -7636,7 +7664,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%96%B4%EB%9E%8F%ED%88%AC%EA%B3%A0%20%EC%98%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%96%B4%EB%9E%8F%ED%88%AC%EA%B3%A0%20%EC%98%81%EA%B4%91%EB%8F%84%EC%84%9C%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/2095967326",
     "openingHours": "월화수목금: 08시~21시           토일:08시~20시",
     "holiday": "없음",
@@ -7693,7 +7721,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1547617232",
@@ -7705,7 +7734,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%96%B4%EB%B2%A4%EB%8D%94%EC%B9%98%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%96%B4%EB%B2%A4%EB%8D%94%EC%B9%98%EC%BB%A4%ED%94%BC%20%EC%84%9C%EB%A9%B4%EB%A1%9C%ED%84%B0%EB%A6%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1547617232",
     "openingHours": "월화수목금:08~20시      토일: 09~20시",
     "holiday": "없음",
@@ -7763,7 +7792,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "64432873",
@@ -7775,7 +7805,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98051%20%EC%84%9C%EB%A9%B4DB%E...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98051%20%EC%84%9C%EB%A9%B4DB%EC%82%AC%EC%98%A5%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/64432873",
     "openingHours": "월화수목금:07~20시          토:07~18시",
     "holiday": "없음",
@@ -7832,7 +7862,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "315404731",
@@ -7844,7 +7875,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98051%20%EC%84%9C%EB%A9%B4%EC%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98051%20%EC%84%9C%EB%A9%B4%EC%A4%91%EC%95%99%EB%8C%80%EB%A1%9C%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/315404731",
     "openingHours": "07시~22시",
     "holiday": "없음",
@@ -7901,7 +7932,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "204304647",
@@ -8053,7 +8085,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%85%90%ED%8D%BC%EC%84%BC%ED%8A%B8%EC%BB%A4%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%85%90%ED%8D%BC%EC%84%BC%ED%8A%B8%EC%BB%A4%ED%94%BC%20%EC%84%9C%EB%A9%B4%EC%84%9C%EC%A0%84%EB%A1%9C%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/59223974",
     "openingHours": "매일 07:30~18:00 토요일 08:30~15:30",
     "holiday": "매주 일요일",
@@ -8110,7 +8142,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "2003847280",
@@ -8122,7 +8155,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%8C%8C%EC%8A%A4%EC%BF%A0%EC%B0%8C%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%8C%8C%EC%8A%A4%EC%BF%A0%EC%B0%8C%20%EC%84%9C%EB%A9%B4%EC%95%84%EC%9D%B4%EC%98%A8%EC%8B%9C%ED%8B%B0%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/2003847280",
     "openingHours": "08~22시",
     "holiday": "없음",
@@ -8179,7 +8212,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1143486514",
@@ -8191,7 +8225,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EC%98%A4%EC%BB%A4%ED%94%BC%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9D%B4%EC%98%A4%EC%BB%A4%ED%94%BC%20%EC%84%9C%EB%A9%B4%EC%A4%91%EC%95%99%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1143486514",
     "openingHours": "매일 08~21:30      일요일 11~19:00",
     "holiday": "없음",
@@ -8249,7 +8283,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "24710488",
@@ -8261,7 +8296,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%A0%EB%A6%AC%EC%8A%A4%20%EB%B6%80%EC%82%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%A0%EB%A6%AC%EC%8A%A4%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%9D%BC%EB%B2%88%EA%B0%80%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/24710488",
     "openingHours": "월화수목일:10시~22시30분    금토:10시~23시",
     "holiday": "없음",
@@ -8319,7 +8354,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1683904404",
@@ -8331,7 +8367,7 @@
     "menu1": "방탈출/추리게임",
     "menu2": "테마룸",
     "menu3": "협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EA%B2%8C%EC%9E%84%EC%98%A4%EB%B8%8C%EB%A7%88%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EA%B2%8C%EC%9E%84%EC%98%A4%EB%B8%8C%EB%A7%88%EC%9D%B8%EB%93%9C%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1683904404",
     "openingHours": "변동",
     "holiday": "없음",
@@ -8391,7 +8427,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "699578399",
@@ -8486,7 +8523,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%94%ED%95%84%EB%A6%84%20%EB%B6%80%EC%82%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%94%ED%95%84%EB%A6%84%20%EC%A0%84%ED%8F%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1067694833",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -8551,7 +8588,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "28574930",
@@ -8563,7 +8601,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%A4%EC%95%A4%EB%8D%94%EB%A8%B8%20%EB%B0%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%8D%A4%EC%95%A4%EB%8D%94%EB%A8%B8%20%EB%B0%A9%ED%83%88%EC%B6%9C%EC%B9%B4%ED%8E%98%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/28574930",
     "openingHours": "변동",
     "holiday": "없음",
@@ -8636,7 +8674,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1215657298",
@@ -8725,7 +8764,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%A3%B8%EC%A6%88%EC%97%90%EC%9D%B4%20%EC%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%A3%B8%EC%A6%88%EC%97%90%EC%9D%B4%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1779759976",
     "openingHours": "변동",
     "holiday": "없음",
@@ -8786,7 +8825,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "178667099",
@@ -8798,7 +8838,7 @@
     "menu1": "타로 상담",
     "menu2": "사주 상담",
     "menu3": "운세 상담",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B8%94%EB%9E%99%EC%8A%A4%ED%83%80%ED%83%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B8%94%EB%9E%99%EC%8A%A4%ED%83%80%ED%83%80%EB%A1%9C%EC%B9%B4%ED%8E%98%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/178667099",
     "openingHours": "13시~22시",
     "holiday": "없음",
@@ -8870,7 +8910,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1722707439",
@@ -8882,7 +8923,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%EB%A9%94%EB%AA%A8%EB%A6%AC%20%EC%A0%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%EB%A9%94%EB%AA%A8%EB%A6%AC%20%EC%A0%84%ED%8F%AC%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1722707439",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -8947,7 +8988,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "378468032",
@@ -8959,7 +9001,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%EB%B0%80%EC%9D%98%ED%99%94%EC%9B%90%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%EB%B0%80%EC%9D%98%ED%99%94%EC%9B%90%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/378468032",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9020,7 +9062,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "629764977",
@@ -9032,7 +9075,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84%20%EB%8D%98%EC%A0%84%20%EB%A0%88%EB%93%9C%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/629764977",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9093,7 +9136,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "310013350",
@@ -9105,7 +9149,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%9D%B4%EC%8A%A4%EC%BC%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84%EB%A3%B8%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/310013350",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9166,7 +9210,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1339365185",
@@ -9178,7 +9223,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%B8%EB%9D%BC%EC%A0%AC%20%EC%9B%B0%EC%B9%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%84%B8%EB%9D%BC%EC%A0%AC%EC%9B%B0%EC%B9%B4%ED%8E%98%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%A7%81%EC%98%81%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1339365185",
     "openingHours": "11시~20시",
     "holiday": "없음",
@@ -9242,7 +9287,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1180139659",
@@ -9254,7 +9300,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EB%B6%80%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EB%B6%80%EA%B8%B0%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1180139659",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -9319,7 +9365,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1931140525",
@@ -9331,7 +9378,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EC%A0%90%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EC%A0%90%ED%8F%AC%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1931140525",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -9396,7 +9443,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "261276767",
@@ -9408,7 +9456,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%ED%91%B8%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%ED%91%B8%EC%BD%94%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/261276767",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -9473,7 +9521,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "7977021",
@@ -9559,7 +9608,7 @@
     "menu1": "커피",
     "menu2": "라떼/음료",
     "menu3": "디저트",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%95%84%EC%88%98%EB%9D%BC%EB%B0%9C%EB%B0%9C%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%95%84%EC%88%98%EB%9D%BC%EB%B0%9C%EB%B0%9C%ED%83%80%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/351645218",
     "openingHours": "13시~ 다음날 08시",
     "holiday": "없음",
@@ -9619,7 +9668,8 @@
     "estimatedPriceCouple": "12000~24000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "194044190",
@@ -9708,7 +9758,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%9A%B0%EB%93%9C%EB%A1%9C%EC%9A%B0%EC%82%AC%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%9A%B0%EB%93%9C%EB%A1%9C%EC%9A%B0%20%EC%82%AC%EC%A7%84%EA%B4%80%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1126913940",
     "openingHours": "월화목금토일:10시40분~19시",
     "holiday": "수요일",
@@ -9771,7 +9821,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "665041653",
@@ -9783,7 +9834,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84%ED%83%91%20%EB%B6%80%EC%82%B0%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/665041653",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9844,7 +9895,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "137-카타르시스 이스케이프 서면점",
@@ -9856,7 +9908,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4%20%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9917,7 +9969,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "308581366",
@@ -9929,7 +9982,7 @@
     "menu1": "방탈출 게임",
     "menu2": "테마룸",
     "menu3": "추리/협동 플레이",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%81%AC%EB%9D%BC%EC%9E%84%EC%94%AC%ED%94%8C%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%81%AC%EB%9D%BC%EC%9E%84%EC%94%AC%ED%94%8C%EB%A0%88%EC%9D%B4%20%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/308581366",
     "openingHours": "변동",
     "holiday": "없음",
@@ -9990,7 +10043,8 @@
     "estimatedPriceCouple": "10000~44000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "2087302333",
@@ -10002,7 +10056,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%94%8C%EB%9E%9C%EB%B9%84%EC%8A%A4%ED%8A%9C%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%94%8C%EB%9E%9C%EB%B9%84%20%EB%B6%80%EC%82%B0%EC%84%9C%EB%A9%B4%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/2087302333",
     "openingHours": "11~21:30",
     "holiday": "없음",
@@ -10065,7 +10119,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "1052121698",
@@ -10077,7 +10132,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%94%BD%EB%8B%B7%20%EB%B6%80%EC%82%B0%EC%A0%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%94%BD%EB%8B%B7%20%EB%B6%80%EC%82%B0%EC%A0%84%ED%8F%AC%EC%A0%90%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/1052121698",
     "openingHours": "24시간 운영",
     "holiday": "없음",
@@ -10142,7 +10197,8 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   },
   {
     "id": "441787137",
@@ -10154,7 +10210,7 @@
     "menu1": "셀프사진 촬영",
     "menu2": "사진 인화",
     "menu3": "프로필/기념사진",
-    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%84%EB%A6%84%EC%96%B4%ED%83%80%EC%9E%84%...",
+    "naverMapUrl": "https://map.naver.com/p/search/%ED%95%84%EB%A6%84%EC%96%B4%ED%83%80%EC%9E%84%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC",
     "kakaoMapUrl": "http://place.map.kakao.com/441787137",
     "openingHours": "11시~20시",
     "holiday": "없음",
@@ -10217,6 +10273,7 @@
     "estimatedPriceCouple": "8000~30000",
     "priceTier": "저예산",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "naverLinkStatus": "검색링크재생성"
   }
 ]
