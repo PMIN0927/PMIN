@@ -66,7 +66,7 @@ export default function CourseMap({ course }: { course: Course }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const items = useMemo(() => mapPlaces(course), [course]);
-  const courseItems = items.filter((item) => item.kind === "course");
+  const courseItems = useMemo(() => items.filter((item) => item.kind === "course"), [items]);
   const visibleItems = expanded ? items : items.slice(0, 3);
 
   const relayoutMap = (fitBounds = false) => {
@@ -75,7 +75,6 @@ export default function CourseMap({ course }: { course: Course }) {
     requestAnimationFrame(() => {
       map.relayout();
       if (fitBounds && boundsRef.current && items.length > 1) map.setBounds(boundsRef.current);
-      else if (centerRef.current) map.setCenter(centerRef.current);
     });
   };
 
@@ -187,7 +186,7 @@ export default function CourseMap({ course }: { course: Course }) {
     return () => {
       cancelled = true;
     };
-  }, [items, courseItems]);
+  }, [items]);
 
   if (items.length === 0 || errorMessage) {
     return (
