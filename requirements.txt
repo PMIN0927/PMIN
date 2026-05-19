@@ -1,0 +1,5 @@
+requests
+openpyxl
+python-dotenv
+rapidfuzz
+pandas; python_version < "3.14"
