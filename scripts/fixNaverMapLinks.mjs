@@ -6,14 +6,14 @@ const placesPath = path.join(root, "data", "places.json");
 const places = JSON.parse(fs.readFileSync(placesPath, "utf-8"));
 
 function makeNaverMapSearchUrl(place) {
-  const query = `${place.name} 부산진구`;
+  const query = place.name;
   return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 }
 
 let fixed = 0;
 const nextPlaces = places.map((place) => {
   const url = String(place.naverMapUrl || "");
-  const isBroken = !url || url.includes("...") || url.endsWith("%") || !url.includes("naver");
+  const isBroken = !url || url.includes("...") || url.endsWith("%") || !url.includes("naver") || place.naverLinkStatus === "검색링크재생성";
   if (!isBroken) return place;
   fixed += 1;
   return {
