@@ -10,13 +10,23 @@ body {
   margin: 0;
   background: #ffffff;
   color: #2f2630;
+  overflow-x: hidden;
 }
 
 .phone-shell {
   min-height: 100vh;
+  width: min(100vw, 430px);
   max-width: 430px;
   margin: 0 auto;
   background: #ffffff;
+  overflow-x: hidden;
+}
+
+.kakao-map-panel {
+  height: 320px;
+  min-height: 320px;
+  width: 100%;
+  position: relative;
 }
 
 .safe-bottom {

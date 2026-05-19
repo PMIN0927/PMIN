@@ -69,28 +69,25 @@ export default function CourseMap({ course }: { course: Course }) {
   const courseItems = items.filter((item) => item.kind === "course");
   const visibleItems = expanded ? items : items.slice(0, 3);
 
-  const relayoutMap = () => {
+  const relayoutMap = (fitBounds = false) => {
     const map = mapRef.current;
     if (!map || !window.kakao?.maps) return;
-    window.setTimeout(() => {
+    requestAnimationFrame(() => {
       map.relayout();
-      if (boundsRef.current && items.length > 1) map.setBounds(boundsRef.current);
+      if (fitBounds && boundsRef.current && items.length > 1) map.setBounds(boundsRef.current);
       else if (centerRef.current) map.setCenter(centerRef.current);
-    }, 80);
+    });
   };
 
   useEffect(() => {
-    relayoutMap();
+    window.setTimeout(() => relayoutMap(true), 120);
   }, [expanded]);
 
   useEffect(() => {
-    if (!ref.current) return;
-    const observer = new ResizeObserver(() => relayoutMap());
-    observer.observe(ref.current);
-    window.addEventListener("resize", relayoutMap);
+    const onResize = () => relayoutMap(true);
+    window.addEventListener("resize", onResize);
     return () => {
-      observer.disconnect();
-      window.removeEventListener("resize", relayoutMap);
+      window.removeEventListener("resize", onResize);
     };
   }, [items.length]);
 
@@ -166,9 +163,9 @@ export default function CourseMap({ course }: { course: Course }) {
         if (items.length > 1) map.setBounds(bounds);
         window.setTimeout(() => {
           if (cancelled) return;
-          relayoutMap();
+          relayoutMap(true);
           setIsLoaded(true);
-        }, 150);
+        }, 250);
       });
     };
 
@@ -214,7 +211,7 @@ export default function CourseMap({ course }: { course: Course }) {
         </div>
       </div>
       <div className="relative border-y border-rose-50">
-        <div ref={ref} className="h-80 w-full" />
+        <div ref={ref} className="kakao-map-panel" />
         {!isLoaded && (
           <div className="absolute inset-0 grid place-items-center bg-white/70 text-sm font-semibold text-zinc-500">
             지도를 불러오는 중이에요
