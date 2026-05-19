@@ -24,9 +24,11 @@ export default function HomePage() {
 
       <section className="flex flex-1 flex-col justify-center pb-10 text-center">
         <div className="mx-auto grid h-28 w-28 place-items-center rounded-[36px] bg-roseSoft text-6xl shadow-card">💗</div>
-        <h1 className="mt-10 text-[30px] font-black leading-tight text-ink">오늘 데이트 코스, 이제 고민하지 마세요</h1>
+        <h1 className="mx-auto mt-10 max-w-[320px] text-[27px] font-black leading-[1.25] text-ink">
+          오늘 데이트 예정이신가요?
+        </h1>
         <p className="mx-auto mt-4 max-w-[310px] text-[15px] leading-7 text-zinc-500">
-          취향과 오늘 기분을 바탕으로 식사, 카페나 술집, 중간에 들를 곳까지 한 번에 묶어드릴게요.
+          두 분의 분위기에 어울리는 식사, 카페나 술집, 중간에 들를 곳까지 한 번에 추천해드릴게요.
         </p>
 
         <div className="mt-9 grid grid-cols-3 gap-2">

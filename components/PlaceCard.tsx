@@ -15,9 +15,22 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
   const menus = [place.menu1, place.menu2, place.menu3].filter(Boolean);
   const mapUrl = place.naverMapUrl || place.kakaoMapUrl;
   const tags = [...(place.situationKeywords || []), ...(place.moodKeywords || [])].slice(0, 4);
+  const visual = getPlaceVisual(place);
 
   return (
     <article className={`rounded-[1.75rem] border bg-white ${compact ? "p-4 pl-12" : "p-5"} shadow-card ${selected ? "border-roseApp" : "border-zinc-100"}`}>
+      {!compact && (
+        <div className={`mb-4 flex h-32 items-center justify-between overflow-hidden rounded-[1.5rem] bg-gradient-to-br ${visual.gradient} px-5`}>
+          <div>
+            <p className="text-xs font-black text-white/75">{visual.label}</p>
+            <p className="mt-2 max-w-[150px] text-lg font-black leading-tight text-white">{visual.copy}</p>
+          </div>
+          <div className="grid h-20 w-20 place-items-center rounded-[28px] bg-white/30 text-5xl shadow-card backdrop-blur">
+            {visual.emoji}
+          </div>
+        </div>
+      )}
+
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-black text-roseApp">{place.role || place.category || "데이트 장소"}</p>
@@ -27,19 +40,6 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
       </div>
 
       <p className="mt-3 text-sm leading-6 text-zinc-600">{place.description || place.detailCategory || place.category || "방문 전 상세 정보를 확인해보세요."}</p>
-
-      {!compact && (
-        <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
-          <div className="rounded-2xl bg-zinc-50 p-3">
-            <p className="font-bold text-zinc-400">1인 예상</p>
-            <p className="mt-1 font-black text-ink">{place.estimatedPricePerPerson || "확인필요"}</p>
-          </div>
-          <div className="rounded-2xl bg-zinc-50 p-3">
-            <p className="font-bold text-zinc-400">커플 예상</p>
-            <p className="mt-1 font-black text-ink">{place.estimatedPriceCouple || "확인필요"}</p>
-          </div>
-        </div>
-      )}
 
       {menus.length > 0 && !compact && (
         <div className="mt-3 flex flex-wrap gap-2">
@@ -88,4 +88,51 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
       </div>
     </article>
   );
+}
+
+function getPlaceVisual(place: Place) {
+  const text = [place.role, place.category, place.detailCategory, place.description, place.name, ...(place.coreKeywords || [])].join(" ");
+
+  if (/카페|커피|디저트|베이커리|빙수|찻집/.test(text)) {
+    return {
+      emoji: "☕",
+      label: "CAFE",
+      copy: "잠깐 쉬어가는 달달한 시간",
+      gradient: "from-amber-300 to-rose-300"
+    };
+  }
+
+  if (/술|이자카야|바|포차|하이볼|맥주|와인|주점|야키토리/.test(text)) {
+    return {
+      emoji: "🍻",
+      label: "DRINK",
+      copy: "저녁 분위기를 이어가는 한 잔",
+      gradient: "from-violet-400 to-fuchsia-400"
+    };
+  }
+
+  if (/사진|포토|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|소품/.test(text)) {
+    return {
+      emoji: "📸",
+      label: "PLAY",
+      copy: "중간에 들르면 좋은 가벼운 재미",
+      gradient: "from-sky-300 to-violet-400"
+    };
+  }
+
+  if (/샤브|국밥|한식|고기|곱창|라멘|초밥|파스타|피자|돈까스|쌀국수|중식|분식/.test(text)) {
+    return {
+      emoji: "🍽️",
+      label: "MEAL",
+      copy: "데이트의 시작은 든든하게",
+      gradient: "from-rose-300 to-orange-300"
+    };
+  }
+
+  return {
+    emoji: "💗",
+    label: "DATE",
+    copy: "오늘 코스에 어울리는 후보",
+    gradient: "from-rose-300 to-pink-400"
+  };
 }
