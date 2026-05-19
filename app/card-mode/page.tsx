@@ -18,24 +18,24 @@ const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: str
     role: "식사",
     title: "먼저 식사 장소를 골라주세요",
     refresh: "다른 식사 후보 보기",
-    helper: "오늘 기분과 선호 음식에 맞춰 식사 카드 3개를 골랐어요.",
-    loading: "식사 후보를 고르는 중이에요"
+    helper: "오늘 기분, 예산, 취향 키워드에 맞춰 식사 카드 3개를 골랐어요.",
+    loading: "식사 후보를 다시 고르는 중이에요"
   },
   {
     key: "cafe",
     role: "카페",
     title: "카페도 들러볼까요?",
     refresh: "다른 카페 후보 보기",
-    helper: "대화하기 좋은 카페 후보 3개예요. 원하면 건너뛸 수 있어요.",
-    loading: "카페 후보를 고르는 중이에요"
+    helper: "대화하기 좋은 카페 후보예요. 원하면 건너뛰어도 괜찮아요.",
+    loading: "카페 후보를 다시 고르는 중이에요"
   },
   {
     key: "bar",
     role: "술",
     title: "마지막으로 한잔할 곳을 골라볼까요?",
     refresh: "다른 술집 후보 보기",
-    helper: "식사 뒤 분위기를 이어가기 좋은 술집 카드 3개예요.",
-    loading: "술집 후보를 고르는 중이에요"
+    helper: "식사 뒤 분위기를 이어가기 좋은 술집 후보예요.",
+    loading: "술집 후보를 다시 고르는 중이에요"
   }
 ];
 
@@ -96,7 +96,7 @@ export default function CardModePage() {
   };
 
   if (isLoading) {
-    return <LoadingScreen title={loadingText} description="잠깐만요. 선택한 흐름에 맞춰 다음 후보를 정리하고 있어요." />;
+    return <LoadingScreen title={loadingText} description="잠깐만요. 오늘 상황에 맞는 다음 후보를 정리하고 있어요." />;
   }
 
   return (
@@ -123,7 +123,7 @@ export default function CardModePage() {
 
         <div className="mt-6 space-y-4">
           {candidates.length === 0 ? (
-            <div className="rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요</div>
+            <div className="rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요.</div>
           ) : (
             candidates.map((place) => <PlaceCard key={place.id} place={place} onSelect={() => selectPlace(place)} cta="이걸로 할래요" />)
           )}

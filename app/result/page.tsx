@@ -33,7 +33,7 @@ export default function ResultPage() {
         </Link>
         <p className="text-sm font-black text-ink">오늘 뭐해?</p>
         <Link href="/today" className="grid h-10 w-10 place-items-center rounded-full bg-zinc-50 text-lg font-bold text-zinc-500">
-          ×
+          ↻
         </Link>
       </header>
 

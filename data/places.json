@@ -29,9 +29,10 @@
       "일식",
       "이자카야",
       "서면2번가",
-      "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차",
+      "일식/이자카야"
     ],
     "situationKeywords": [
       "술데이트",
@@ -47,18 +48,28 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "345",
       "일식",
       "이자카야",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "410707086",
@@ -94,8 +105,7 @@
       "치맥",
       "사이드",
       "전포카페거리",
-      "치킨",
-      "치맥"
+      "치킨/호프"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -125,7 +135,12 @@
       "사이드",
       "식사",
       "전포카페거리"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "864317466",
@@ -157,10 +172,11 @@
       "고기",
       "한식",
       "고기구이",
-      "고기",
       "구이",
-      "한식",
-      "든든한식사"
+      "든든한식사",
+      "술안주",
+      "활기찬",
+      "고기/한식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -172,26 +188,36 @@
       "편한식사",
       "가성비식사",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "활기참",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "활기찬"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "갑진집 서면점",
       "고기",
       "한식",
       "고기구이",
-      "식사"
-    ]
+      "식사",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "8738686",
@@ -226,7 +252,7 @@
       "연포탕",
       "해물요리",
       "부전동",
-      "해산물"
+      "낙지/해산물"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -253,7 +279,12 @@
       "해물요리",
       "식사",
       "부전동"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "5-고생끝소금구이 서면본점",
@@ -287,7 +318,9 @@
       "돼지고기",
       "소고기구이",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -297,16 +330,20 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "고생끝소금구이 서면본점",
@@ -314,8 +351,16 @@
       "소금구이",
       "돼지고기",
       "소고기구이",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "9866198",
@@ -346,38 +391,52 @@
       "식사",
       "돈카츠",
       "일식",
-      "돈카츠",
       "카츠",
       "우동",
       "덮밥",
-      "일식"
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "돈카츠/일식"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "고온",
       "돈카츠",
       "일식",
-      "돈카츠",
       "카츠",
       "우동",
       "덮밥",
-      "식사"
-    ]
+      "식사",
+      "라멘",
+      "캐주얼",
+      "저예산"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "58068664",
@@ -408,36 +467,57 @@
       "식사",
       "규카츠",
       "일식",
-      "규카츠",
       "카레",
       "일식 사이드",
-      "일식"
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "깔끔함",
+      "데이트식사",
+      "규카츠/일식"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로",
+      "소개팅",
+      "기분전환"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의",
+      "비쌈주의"
     ],
     "searchKeywords": [
       "규카츠정 서면점",
       "규카츠",
       "일식",
-      "규카츠",
       "카레",
       "일식 사이드",
-      "식사"
-    ]
+      "식사",
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "깔끔함",
+      "데이트식사"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "11495457",
@@ -470,20 +550,26 @@
       "확인필요",
       "서면역",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "가성비",
+      "든든함",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "편한식사",
-      "가성비식사"
+      "가성비식사",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -493,8 +579,16 @@
       "식당",
       "확인필요",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "한식",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "192964575",
@@ -525,9 +619,10 @@
       "식사",
       "고기구이",
       "꽃살",
-      "고기구이",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -535,24 +630,35 @@
       "데이트시작",
       "든든한식사",
       "술가능",
-      "기분전환"
+      "기분전환",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "꽃살집 전포점",
       "고기구이",
       "꽃살",
-      "고기구이",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "713112284",
@@ -583,13 +689,17 @@
       "식사",
       "초밥",
       "일식",
-      "초밥",
       "사시미",
       "우동",
       "덮밥",
       "전포카페거리",
-      "일식",
-      "해산물"
+      "해산물",
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "깔끔함",
+      "데이트식사",
+      "초밥/일식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -599,29 +709,46 @@
       "술가능",
       "늦은시간가능",
       "밤데이트",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로",
+      "소개팅",
+      "기분전환"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
       "깔끔함",
-      "활기참"
+      "활기참",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의",
+      "비쌈주의"
     ],
     "searchKeywords": [
       "내공초밥",
       "초밥",
       "일식",
-      "초밥",
       "사시미",
       "우동",
       "덮밥",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "깔끔함",
+      "데이트식사"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1080156002",
@@ -651,7 +778,8 @@
     "coreKeywords": [
       "식사",
       "식당",
-      "확인필요"
+      "확인필요",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -671,7 +799,12 @@
       "식당",
       "확인필요",
       "식사"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1311011144",
@@ -702,12 +835,13 @@
       "식사",
       "곱창",
       "대창",
-      "대창",
-      "곱창",
       "막창",
       "볶음밥",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬",
+      "곱창/대창"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -717,27 +851,37 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "대창인생 전포동직영점",
       "곱창",
       "대창",
-      "대창",
-      "곱창",
       "막창",
       "볶음밥",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "18637233",
@@ -800,7 +944,12 @@
       "사이드",
       "식사",
       "서면1번가"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "8267341",
@@ -832,7 +981,9 @@
       "피자",
       "파스타",
       "사이드",
-      "양식"
+      "양식",
+      "감성",
+      "데이트식사"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -840,7 +991,10 @@
       "데이트시작",
       "데이트식사",
       "기념일가벼움",
-      "점심가능"
+      "점심가능",
+      "소개팅",
+      "화해",
+      "기분전환"
     ],
     "moodKeywords": [
       "식사중심",
@@ -856,8 +1010,16 @@
       "피자",
       "파스타",
       "사이드",
-      "식사"
-    ]
+      "식사",
+      "양식",
+      "감성",
+      "데이트식사"
+    ],
+    "estimatedPricePerPerson": "16000~30000",
+    "estimatedPriceCouple": "32000~60000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "15-도화식당 부산 서면 본점",
@@ -888,12 +1050,12 @@
       "식사",
       "한식",
       "고기",
-      "고기",
       "한식 메뉴",
-      "고기",
       "구이",
-      "한식",
-      "든든한식사"
+      "든든한식사",
+      "술안주",
+      "활기찬",
+      "한식/고기"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -905,27 +1067,36 @@
       "편한식사",
       "가성비식사",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "활기참",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "활기찬"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "도화식당 부산 서면 본점",
       "한식",
       "고기",
-      "고기",
       "한식 메뉴",
-      "식사"
-    ]
+      "식사",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "304870260",
@@ -956,40 +1127,54 @@
       "식사",
       "돈가스",
       "일식",
-      "돈가스",
       "치즈돈가스",
       "우동",
       "카레",
       "서면역",
-      "일식"
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "돈가스/일식"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "돈까스예찬",
       "돈가스",
       "일식",
-      "돈가스",
       "치즈돈가스",
       "우동",
       "카레",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "라멘",
+      "캐주얼",
+      "저예산"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "542028955",
@@ -1020,12 +1205,13 @@
       "식사",
       "등갈비",
       "고기",
-      "등갈비",
       "쪽갈비",
       "볶음밥",
       "사이드",
-      "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬",
+      "등갈비/고기"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1035,27 +1221,37 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "등짝",
       "등갈비",
       "고기",
-      "등갈비",
       "쪽갈비",
       "볶음밥",
       "사이드",
-      "식사"
-    ]
+      "식사",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2139100797",
@@ -1086,13 +1282,14 @@
       "식사",
       "샤브칼국수",
       "한식",
-      "샤브칼국수",
       "버섯칼국수",
       "볶음밥",
-      "한식",
       "든든한식사",
       "샤브샤브",
-      "따뜻한음식"
+      "따뜻한음식",
+      "가성비",
+      "든든함",
+      "샤브칼국수/한식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1102,13 +1299,16 @@
       "가성비식사",
       "비오는날",
       "무난한식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -1117,11 +1317,17 @@
       "등촌샤브칼국수 서면전포점",
       "샤브칼국수",
       "한식",
-      "샤브칼국수",
       "버섯칼국수",
       "볶음밥",
-      "식사"
-    ]
+      "식사",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "866981754",
@@ -1152,7 +1358,8 @@
       "식사",
       "식당",
       "확인필요",
-      "전포카페거리"
+      "전포카페거리",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1173,7 +1380,12 @@
       "확인필요",
       "식사",
       "전포카페거리"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "10370757",
@@ -1209,8 +1421,7 @@
       "치맥",
       "사이드",
       "서면역",
-      "치킨",
-      "치맥"
+      "치킨/호프"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1239,7 +1450,12 @@
       "사이드",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1890293611",
@@ -1273,7 +1489,9 @@
       "사이드",
       "음료",
       "전포카페거리",
-      "양식"
+      "양식",
+      "감성",
+      "데이트식사"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1282,7 +1500,10 @@
       "데이트식사",
       "기념일가벼움",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "소개팅",
+      "화해",
+      "기분전환"
     ],
     "moodKeywords": [
       "식사중심",
@@ -1300,8 +1521,16 @@
       "사이드",
       "음료",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "양식",
+      "감성",
+      "데이트식사"
+    ],
+    "estimatedPricePerPerson": "16000~30000",
+    "estimatedPriceCouple": "32000~60000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "141665111",
@@ -1364,7 +1593,12 @@
       "사이드",
       "식사",
       "전포카페거리"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "22018715",
@@ -1397,23 +1631,31 @@
       "치즈돈가스",
       "우동",
       "식사 메뉴",
-      "일식"
+      "일식",
+      "라멘",
+      "캐주얼",
+      "저예산"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "박성환돈까스",
@@ -1421,8 +1663,17 @@
       "치즈돈가스",
       "우동",
       "식사 메뉴",
-      "식사"
-    ]
+      "식사",
+      "일식",
+      "라멘",
+      "캐주얼",
+      "저예산"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "16547926",
@@ -1458,8 +1709,7 @@
       "치맥",
       "사이드",
       "서면역",
-      "치킨",
-      "치맥"
+      "치킨/호프"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1489,7 +1739,12 @@
       "사이드",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1103452675",
@@ -1522,23 +1777,31 @@
       "치즈돈가스",
       "카레",
       "우동",
-      "일식"
+      "일식",
+      "라멘",
+      "캐주얼",
+      "저예산"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "사모님돈가스 쥬니어 전포동",
@@ -1546,8 +1809,17 @@
       "치즈돈가스",
       "카레",
       "우동",
-      "식사"
-    ]
+      "식사",
+      "일식",
+      "라멘",
+      "캐주얼",
+      "저예산"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1715835149",
@@ -1584,7 +1856,10 @@
       "펍 안주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "술",
+      "2차",
+      "바/펍"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1600,10 +1875,13 @@
       "식사중심",
       "대화보통",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "삼바리 서면점",
@@ -1614,8 +1892,16 @@
       "하이볼",
       "펍 안주",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "514853126",
@@ -1646,14 +1932,15 @@
       "식사",
       "샤브샤브",
       "한식",
-      "샤브샤브",
       "칼국수",
       "죽",
       "볶음밥",
       "전포카페거리",
-      "한식",
       "든든한식사",
-      "따뜻한음식"
+      "따뜻한음식",
+      "가성비",
+      "든든함",
+      "샤브샤브/한식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1663,13 +1950,16 @@
       "가성비식사",
       "비오는날",
       "무난한식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -1678,13 +1968,19 @@
       "샤브드림 서면점",
       "샤브샤브",
       "한식",
-      "샤브샤브",
       "칼국수",
       "죽",
       "볶음밥",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "673528855",
@@ -1715,13 +2011,14 @@
       "식사",
       "샤브샤브",
       "한식",
-      "샤브샤브",
       "월남쌈",
       "칼국수",
       "죽",
-      "한식",
       "든든한식사",
-      "따뜻한음식"
+      "따뜻한음식",
+      "가성비",
+      "든든함",
+      "샤브샤브/한식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1731,13 +2028,16 @@
       "가성비식사",
       "비오는날",
       "무난한식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -1746,12 +2046,18 @@
       "샤브올 서면점",
       "샤브샤브",
       "한식",
-      "샤브샤브",
       "월남쌈",
       "칼국수",
       "죽",
-      "식사"
-    ]
+      "식사",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "423487180",
@@ -1782,12 +2088,13 @@
       "식사",
       "곱창",
       "막창",
-      "곱창",
       "대창",
-      "막창",
       "볶음밥",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬",
+      "곱창/막창"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1797,27 +2104,37 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "서가장인곱창 부산전포점",
       "곱창",
       "막창",
-      "곱창",
       "대창",
-      "막창",
       "볶음밥",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "10116848",
@@ -1850,7 +2167,10 @@
       "확인필요",
       "서면역",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "가성비",
+      "든든함",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1858,13 +2178,16 @@
       "데이트시작",
       "편한식사",
       "가성비식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -1874,8 +2197,16 @@
       "식당",
       "확인필요",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "한식",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2120931166",
@@ -1906,7 +2237,8 @@
       "식사",
       "식당",
       "확인필요",
-      "서면역"
+      "서면역",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1928,7 +2260,12 @@
       "확인필요",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "77052984",
@@ -1963,7 +2300,7 @@
       "연포탕",
       "해물요리",
       "서면역",
-      "해산물"
+      "낙지/해산물"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -1989,7 +2326,12 @@
       "해물요리",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "310316426",
@@ -2021,7 +2363,9 @@
       "고기구이",
       "서면역",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2031,23 +2375,35 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "석암생소금구이 부산서면점",
       "고기구이",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "23737126",
@@ -2085,8 +2441,10 @@
       "서면역",
       "고기",
       "구이",
-      "한식",
-      "든든한식사"
+      "든든한식사",
+      "가성비",
+      "든든함",
+      "국밥/한식"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2096,14 +2454,17 @@
       "술가능",
       "기분전환",
       "편한식사",
-      "가성비식사"
+      "가성비식사",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "활기참",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "소음주의",
@@ -2118,8 +2479,15 @@
       "수육",
       "사이드",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "324018140",
@@ -2150,9 +2518,10 @@
       "식사",
       "고기구이",
       "소고기",
-      "고기구이",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2162,24 +2531,35 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "소인수분해",
       "고기구이",
       "소고기",
-      "고기구이",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "906302246",
@@ -2210,12 +2590,14 @@
       "식사",
       "초밥",
       "스시",
-      "초밥",
       "사시미",
       "롤",
       "덮밥",
       "일식",
-      "해산물"
+      "해산물",
+      "깔끔함",
+      "데이트식사",
+      "초밥/스시"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2223,7 +2605,9 @@
       "데이트시작",
       "일식선호",
       "술가능",
-      "점심가능"
+      "점심가능",
+      "소개팅",
+      "기분전환"
     ],
     "moodKeywords": [
       "식사중심",
@@ -2233,18 +2617,26 @@
       "활기참"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "비쌈주의"
     ],
     "searchKeywords": [
       "스시이안앤 서면전포직영점",
       "초밥",
       "스시",
-      "초밥",
       "사시미",
       "롤",
       "덮밥",
-      "식사"
-    ]
+      "식사",
+      "일식",
+      "깔끔함",
+      "데이트식사"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "37-신촌양푼이 서면본점",
@@ -2276,9 +2668,8 @@
       "한식",
       "찌개류",
       "양푼이 한식",
-      "찌개류",
-      "한식",
-      "든든한식사"
+      "든든한식사",
+      "한식/찌개류"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2302,9 +2693,13 @@
       "한식",
       "찌개류",
       "양푼이 한식",
-      "찌개류",
       "식사"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1600983532",
@@ -2335,7 +2730,8 @@
       "식사",
       "식당",
       "확인필요",
-      "서면역"
+      "서면역",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2355,7 +2751,12 @@
       "확인필요",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "163802350",
@@ -2387,7 +2788,9 @@
       "고기구이",
       "전포카페거리",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2397,23 +2800,35 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "야키니쿠객 서면점",
       "고기구이",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "9233473",
@@ -2446,7 +2861,8 @@
       "확인필요",
       "서면역",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2471,7 +2887,12 @@
       "확인필요",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1596947302",
@@ -2502,10 +2923,9 @@
       "식사",
       "중식",
       "짬뽕",
-      "짬뽕",
       "짜장면",
       "탕수육",
-      "중식"
+      "중식/짬뽕"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2527,11 +2947,15 @@
       "용이네가마솥짬뽕",
       "중식",
       "짬뽕",
-      "짬뽕",
       "짜장면",
       "탕수육",
       "식사"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1895166572",
@@ -2562,40 +2986,54 @@
       "식사",
       "돈가스",
       "일식",
-      "돈가스",
       "치즈돈가스",
       "우동",
       "카레",
       "전포카페거리",
-      "일식"
+      "라멘",
+      "캐주얼",
+      "저예산",
+      "돈가스/일식"
     ],
     "situationKeywords": [
       "저녁데이트",
       "식사코스",
       "데이트시작",
       "일식선호",
-      "점심가능"
+      "점심가능",
+      "무난한코스",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "감성",
-      "깔끔함"
+      "깔끔함",
+      "캐주얼",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "없음"
+      "없음",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "원카츠 서면점",
       "돈가스",
       "일식",
-      "돈가스",
       "치즈돈가스",
       "우동",
       "카레",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "라멘",
+      "캐주얼",
+      "저예산"
+    ],
+    "estimatedPricePerPerson": "10000~17000",
+    "estimatedPriceCouple": "20000~34000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "845443349",
@@ -2653,7 +3091,12 @@
       "밥류",
       "요리류",
       "식사"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "26895296",
@@ -2685,7 +3128,9 @@
       "고기구이",
       "서면역",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2694,23 +3139,35 @@
       "든든한식사",
       "술가능",
       "기분전환",
-      "점심가능"
+      "점심가능",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "유가네닭갈비 서면롯데점",
       "고기구이",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1560167540",
@@ -2746,8 +3203,10 @@
       "식사류",
       "고기",
       "구이",
-      "한식",
-      "든든한식사"
+      "든든한식사",
+      "술안주",
+      "활기찬",
+      "한식/밥집"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2760,18 +3219,21 @@
       "가성비식사",
       "늦은시간가능",
       "밤데이트",
-      "점심가능"
+      "점심가능",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "활기참",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "활기찬"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "집구석",
@@ -2780,8 +3242,16 @@
       "돼지구이",
       "찌개",
       "식사류",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "8653096",
@@ -2814,7 +3284,10 @@
       "확인필요",
       "서면역",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "가성비",
+      "든든함",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2822,13 +3295,16 @@
       "데이트시작",
       "편한식사",
       "가성비식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -2838,8 +3314,16 @@
       "식당",
       "확인필요",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "한식",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "535075572",
@@ -2872,7 +3356,10 @@
       "확인필요",
       "서면역",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "가성비",
+      "든든함",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2880,13 +3367,16 @@
       "데이트시작",
       "편한식사",
       "가성비식사",
-      "점심가능"
+      "점심가능",
+      "돈없는날",
+      "시험후위로"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -2896,8 +3386,16 @@
       "식당",
       "확인필요",
       "식사",
-      "서면역"
-    ]
+      "서면역",
+      "한식",
+      "가성비",
+      "든든함"
+    ],
+    "estimatedPricePerPerson": "8000~14000",
+    "estimatedPriceCouple": "16000~28000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1935446452",
@@ -2929,7 +3427,12 @@
       "고기구이",
       "전포카페거리",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬",
+      "술",
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -2937,23 +3440,40 @@
       "데이트시작",
       "든든한식사",
       "술가능",
-      "기분전환"
+      "기분전환",
+      "술데이트",
+      "밤데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼",
+      "감성술집"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "호르몬치치 부산서면점",
       "고기구이",
       "식사",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "고기",
+      "술안주",
+      "활기찬",
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1695067130",
@@ -3012,7 +3532,12 @@
       "밥류",
       "요리류",
       "식사"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "819208929",
@@ -3043,7 +3568,8 @@
       "식사",
       "식당",
       "확인필요",
-      "서면역"
+      "서면역",
+      "식당/확인필요"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -3064,7 +3590,12 @@
       "확인필요",
       "식사",
       "서면역"
-    ]
+    ],
+    "estimatedPricePerPerson": "확인필요",
+    "estimatedPriceCouple": "확인필요",
+    "priceTier": "확인필요",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1404103238",
@@ -3097,7 +3628,9 @@
       "살치살",
       "갈비살류",
       "고기",
-      "구이"
+      "구이",
+      "술안주",
+      "활기찬"
     ],
     "situationKeywords": [
       "저녁데이트",
@@ -3107,24 +3640,36 @@
       "술가능",
       "기분전환",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "술데이트"
     ],
     "moodKeywords": [
       "식사중심",
       "대화보통",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
       "소음주의",
-      "조용한대화비추천"
+      "조용한대화비추천",
+      "조용한화해주의"
     ],
     "searchKeywords": [
       "흑쇠 서면본점",
       "소고기구이",
       "살치살",
       "갈비살류",
-      "식사"
-    ]
+      "식사",
+      "고기",
+      "술안주",
+      "활기찬"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "638622240",
@@ -3159,7 +3704,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3172,10 +3718,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "가련한부엌",
@@ -3184,8 +3733,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1030259024",
@@ -3221,7 +3777,8 @@
       "서면2번가",
       "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3237,10 +3794,13 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "간지 이자카야",
@@ -3249,8 +3809,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "415225598",
@@ -3286,7 +3853,8 @@
       "부전동",
       "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3302,10 +3870,13 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "갓포현",
@@ -3314,8 +3885,15 @@
       "하이볼",
       "맥주",
       "술",
-      "부전동"
-    ]
+      "부전동",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "670872149",
@@ -3350,7 +3928,8 @@
       "맥주",
       "서면2번가",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3363,10 +3942,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "구주 서면점",
@@ -3375,8 +3957,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "677804578",
@@ -3411,7 +4000,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3424,10 +4014,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "글로우",
@@ -3436,8 +4029,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2019713666",
@@ -3472,7 +4072,8 @@
       "맥주",
       "서면2번가",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3485,10 +4086,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "노군꼬치 부산서면점",
@@ -3497,8 +4101,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2073413900",
@@ -3533,7 +4144,9 @@
       "주류",
       "하이볼",
       "안주",
-      "술집"
+      "술집",
+      "2차",
+      "바/주점"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3546,10 +4159,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "노리바",
@@ -3559,8 +4175,14 @@
       "주류",
       "하이볼",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1388556927",
@@ -3591,7 +4213,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3604,17 +4227,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "다이린",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "124886881",
@@ -3649,7 +4281,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3662,10 +4295,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "단디",
@@ -3674,8 +4310,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "16243380",
@@ -3706,43 +4349,64 @@
       "술",
       "회",
       "해산물 술집",
-      "회",
       "해산물 안주",
       "소주",
       "맥주",
       "서면역",
       "술집",
       "안주",
-      "해산물"
+      "해산물",
+      "일식",
+      "깔끔함",
+      "데이트식사",
+      "2차",
+      "회/해산물 술집"
     ],
     "situationKeywords": [
       "술데이트",
       "2차",
       "기분전환",
       "술가능",
-      "저녁데이트"
+      "저녁데이트",
+      "소개팅",
+      "밤데이트"
     ],
     "moodKeywords": [
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
       "감성술집",
-      "활기참"
+      "활기참",
+      "깔끔함",
+      "감성",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "비쌈주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "대림참치 서면점",
       "회",
       "해산물 술집",
-      "회",
       "해산물 안주",
       "소주",
       "맥주",
       "술",
-      "서면역"
-    ]
+      "서면역",
+      "일식",
+      "깔끔함",
+      "데이트식사",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "555235287",
@@ -3777,21 +4441,26 @@
       "맥주",
       "부전동",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
       "2차",
-      "기분전환"
+      "기분전환",
+      "밤데이트"
     ],
     "moodKeywords": [
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "동경",
@@ -3800,8 +4469,15 @@
       "하이볼",
       "맥주",
       "술",
-      "부전동"
-    ]
+      "부전동",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "638666787",
@@ -3838,7 +4514,8 @@
       "술집",
       "안주",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3855,10 +4532,13 @@
       "저녁분위기",
       "감성술집",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "라스트춘선 서면점",
@@ -3867,8 +4547,15 @@
       "전통주",
       "소주",
       "하이볼",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "445846358",
@@ -3903,7 +4590,8 @@
       "맥주",
       "서면역",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3916,10 +4604,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "마실",
@@ -3928,8 +4619,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면역"
-    ]
+      "서면역",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "319384515",
@@ -3964,7 +4662,8 @@
       "맥주",
       "부전동",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -3977,10 +4676,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "마쯔리야",
@@ -3989,8 +4691,15 @@
       "하이볼",
       "맥주",
       "술",
-      "부전동"
-    ]
+      "부전동",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "5269562",
@@ -4021,12 +4730,13 @@
       "술",
       "야키토리",
       "이자카야",
-      "야키토리",
       "하이볼",
       "이자카야 안주",
       "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차",
+      "야키토리/이자카야"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4042,20 +4752,29 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "만쿠",
       "야키토리",
       "이자카야",
-      "야키토리",
       "하이볼",
       "이자카야 안주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "138706582",
@@ -4090,8 +4809,10 @@
       "치킨",
       "튀김 안주",
       "마른안주",
-      "치킨",
-      "치맥"
+      "치맥",
+      "안주",
+      "2차",
+      "맥주/호프"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4105,10 +4826,14 @@
     "moodKeywords": [
       "야간데이트",
       "활기있는분위기",
-      "캐주얼"
+      "캐주얼",
+      "활기찬",
+      "감성술집"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "미생맥주 부산서면점",
@@ -4118,8 +4843,15 @@
       "치킨",
       "튀김 안주",
       "마른안주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1593038469",
@@ -4150,7 +4882,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4163,17 +4896,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "부단",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "712135076",
@@ -4204,13 +4946,16 @@
       "술",
       "훠궈",
       "양꼬치",
-      "훠궈",
-      "양꼬치",
       "중식 안주",
       "서면역",
       "술집",
       "안주",
-      "중식"
+      "중식",
+      "고기",
+      "술안주",
+      "활기찬",
+      "2차",
+      "훠궈/양꼬치"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4225,21 +4970,33 @@
       "활기있는분위기",
       "저녁분위기",
       "감성술집",
-      "활기참"
+      "활기참",
+      "활기찬",
+      "캐주얼"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "사천훠궈양꼬치 서면점",
       "훠궈",
       "양꼬치",
-      "훠궈",
-      "양꼬치",
       "중식 안주",
       "술",
-      "서면역"
-    ]
+      "서면역",
+      "고기",
+      "술안주",
+      "활기찬",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "18000~35000",
+    "estimatedPriceCouple": "36000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1265744828",
@@ -4270,7 +5027,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4283,17 +5041,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "상제씨",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2060136324",
@@ -4328,7 +5095,8 @@
       "맥주",
       "서면역",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4341,10 +5109,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "샌부",
@@ -4353,8 +5124,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면역"
-    ]
+      "서면역",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "15409073",
@@ -4385,7 +5163,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4398,17 +5177,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "성수",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1960020887",
@@ -4439,7 +5227,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4452,17 +5241,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "시월",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "74340398",
@@ -4493,10 +5291,11 @@
       "술",
       "맥주",
       "바",
-      "맥주",
       "하이볼",
       "안주",
-      "술집"
+      "술집",
+      "2차",
+      "맥주/바"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4509,20 +5308,28 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "싱글보리",
       "맥주",
       "바",
-      "맥주",
       "하이볼",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "844399129",
@@ -4557,21 +5364,26 @@
       "맥주",
       "부전동",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
       "2차",
-      "기분전환"
+      "기분전환",
+      "밤데이트"
     ],
     "moodKeywords": [
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "아마이까",
@@ -4580,8 +5392,15 @@
       "하이볼",
       "맥주",
       "술",
-      "부전동"
-    ]
+      "부전동",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "994065666",
@@ -4618,7 +5437,9 @@
       "일식",
       "술집",
       "안주",
-      "해산물"
+      "해산물",
+      "2차",
+      "해산물주점/이자카야"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4637,10 +5458,13 @@
       "깔끔함",
       "저녁분위기",
       "감성술집",
-      "활기참"
+      "활기참",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "아키수산",
@@ -4649,8 +5473,15 @@
       "회",
       "사시미",
       "해산물 안주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1100771746",
@@ -4685,7 +5516,8 @@
       "맥주",
       "서면2번가",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4698,10 +5530,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "안주박사 술박사 서면본점",
@@ -4710,8 +5545,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "64890577",
@@ -4746,7 +5588,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4759,10 +5602,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "야키맨션",
@@ -4771,8 +5617,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "507029238",
@@ -4810,13 +5663,15 @@
       "서면2번가",
       "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
       "2차",
       "기분전환",
-      "일식선호"
+      "일식선호",
+      "밤데이트"
     ],
     "moodKeywords": [
       "야간데이트",
@@ -4824,10 +5679,13 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "야키토리온정",
@@ -4838,8 +5696,15 @@
       "사케",
       "이자카야 안주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1735884768",
@@ -4874,7 +5739,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4887,10 +5753,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "야타이미세",
@@ -4899,8 +5768,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1207884297",
@@ -4937,7 +5813,8 @@
       "주류",
       "일식",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -4953,10 +5830,13 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "유호",
@@ -4966,8 +5846,15 @@
       "하이볼",
       "사케",
       "주류",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2060930548",
@@ -5000,7 +5887,8 @@
       "안주",
       "하이볼",
       "맥주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5013,10 +5901,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "자유인",
@@ -5024,8 +5915,14 @@
       "안주",
       "하이볼",
       "맥주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "26412114",
@@ -5061,7 +5958,9 @@
       "위스키",
       "펍 안주",
       "술집",
-      "안주"
+      "안주",
+      "2차",
+      "펍/바"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5074,10 +5973,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "재즈펍 318",
@@ -5087,8 +5989,15 @@
       "칵테일",
       "위스키",
       "펍 안주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "124414879",
@@ -5119,7 +6028,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5132,17 +6042,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "주씨네",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "85-중앙선술 서면본점",
@@ -5180,7 +6099,8 @@
       "술집",
       "안주",
       "한식",
-      "든든한식사"
+      "든든한식사",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5197,10 +6117,13 @@
       "저녁분위기",
       "감성술집",
       "캐주얼",
-      "부담없음"
+      "부담없음",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "중앙선술 서면본점",
@@ -5210,8 +6133,15 @@
       "소주",
       "맥주",
       "전통주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "687432033",
@@ -5242,7 +6172,8 @@
       "술",
       "주점",
       "안주",
-      "술집"
+      "술집",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5255,17 +6186,26 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "지데로",
       "주점",
       "안주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1829411302",
@@ -5301,7 +6241,8 @@
       "전포카페거리",
       "술집",
       "안주",
-      "해산물"
+      "해산물",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5317,10 +6258,13 @@
       "활기있는분위기",
       "저녁분위기",
       "감성술집",
-      "활기참"
+      "활기참",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "청년어부",
@@ -5329,8 +6273,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "776078279",
@@ -5365,7 +6316,8 @@
       "맥주",
       "부전동",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5378,10 +6330,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "츠쿠요",
@@ -5390,8 +6345,15 @@
       "하이볼",
       "맥주",
       "술",
-      "부전동"
-    ]
+      "부전동",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "89-코리 서면본점",
@@ -5427,7 +6389,9 @@
       "소주",
       "맥주",
       "일식",
-      "술집"
+      "술집",
+      "2차",
+      "이자카야/주점"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5443,10 +6407,13 @@
       "감성",
       "깔끔함",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "코리 서면본점",
@@ -5456,8 +6423,14 @@
       "하이볼",
       "소주",
       "맥주",
-      "술"
-    ]
+      "술",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "102506388",
@@ -5492,7 +6465,8 @@
       "맥주",
       "전포카페거리",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5505,10 +6479,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "태태태",
@@ -5517,8 +6494,15 @@
       "하이볼",
       "맥주",
       "술",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1300580408",
@@ -5549,11 +6533,12 @@
       "술",
       "맥주",
       "튀김주점",
-      "맥주",
       "튀김 안주",
       "간단 안주",
       "술집",
-      "안주"
+      "안주",
+      "2차",
+      "맥주/튀김주점"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5566,20 +6551,29 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "프리츠프리츠",
       "맥주",
       "튀김주점",
-      "맥주",
       "튀김 안주",
       "간단 안주",
-      "술"
-    ]
+      "술",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1739889211",
@@ -5614,7 +6608,8 @@
       "맥주",
       "서면역",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5627,10 +6622,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "희자도금",
@@ -5639,8 +6637,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면역"
-    ]
+      "서면역",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2019106668",
@@ -5675,7 +6680,8 @@
       "맥주",
       "서면2번가",
       "술집",
-      "안주"
+      "안주",
+      "2차"
     ],
     "situationKeywords": [
       "술데이트",
@@ -5688,10 +6694,13 @@
       "야간데이트",
       "활기있는분위기",
       "저녁분위기",
-      "감성술집"
+      "감성술집",
+      "활기찬"
     ],
     "avoidKeywords": [
-      "조용한화해대화주의"
+      "조용한화해대화주의",
+      "조용한화해주의",
+      "소음주의"
     ],
     "searchKeywords": [
       "힝",
@@ -5700,8 +6709,15 @@
       "하이볼",
       "맥주",
       "술",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "안주",
+      "2차"
+    ],
+    "estimatedPricePerPerson": "20000~35000",
+    "estimatedPriceCouple": "40000~70000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "96879827",
@@ -5735,19 +6751,23 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -5759,8 +6779,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1866527005",
@@ -5794,7 +6820,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -5802,12 +6828,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -5819,8 +6849,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1278100411",
@@ -5854,7 +6890,7 @@
       "음료",
       "디저트",
       "부전동",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -5862,12 +6898,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -5879,8 +6919,14 @@
       "라떼",
       "음료",
       "디저트",
-      "부전동"
-    ]
+      "부전동",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "253845668",
@@ -5914,7 +6960,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -5922,12 +6968,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -5939,8 +6989,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1844122070",
@@ -5974,19 +7030,23 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -5998,8 +7058,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "695966552",
@@ -6033,7 +7099,7 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6041,12 +7107,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6058,8 +7128,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "327355754",
@@ -6093,19 +7169,23 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6117,8 +7197,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "96811282",
@@ -6152,19 +7238,23 @@
       "음료",
       "디저트",
       "부전동",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6176,8 +7266,14 @@
       "라떼",
       "음료",
       "디저트",
-      "부전동"
-    ]
+      "부전동",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1917836369",
@@ -6211,7 +7307,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6221,12 +7317,16 @@
       "휴식",
       "늦은시간가능",
       "밤데이트",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6238,8 +7338,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "103591723",
@@ -6273,7 +7379,7 @@
       "음료",
       "디저트",
       "서면2번가",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6281,12 +7387,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6298,8 +7408,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "12807299",
@@ -6333,7 +7449,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6341,12 +7457,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6358,8 +7478,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1577681031",
@@ -6393,19 +7519,23 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6417,8 +7547,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "25118052",
@@ -6452,7 +7588,7 @@
       "음료",
       "디저트",
       "부전동",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6460,12 +7596,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6477,8 +7617,14 @@
       "라떼",
       "음료",
       "디저트",
-      "부전동"
-    ]
+      "부전동",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2095967326",
@@ -6512,19 +7658,23 @@
       "음료",
       "디저트",
       "부전동",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6536,8 +7686,14 @@
       "라떼",
       "음료",
       "디저트",
-      "부전동"
-    ]
+      "부전동",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1547617232",
@@ -6571,7 +7727,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6579,12 +7735,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6596,8 +7756,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "64432873",
@@ -6631,19 +7797,23 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6655,8 +7825,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "315404731",
@@ -6690,19 +7866,23 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6714,8 +7894,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "204304647",
@@ -6749,7 +7935,7 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6757,12 +7943,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6774,8 +7964,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1584909618",
@@ -6809,7 +8005,7 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6817,12 +8013,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6834,8 +8034,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "59223974",
@@ -6869,19 +8075,23 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6893,8 +8103,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2003847280",
@@ -6928,19 +8144,23 @@
       "음료",
       "디저트",
       "서면역",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
       "화해대화",
       "시험후위로",
       "비오는날",
-      "휴식"
+      "휴식",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -6952,8 +8172,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1143486514",
@@ -6987,7 +8213,7 @@
       "음료",
       "디저트",
       "전포카페거리",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -6995,12 +8221,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -7012,8 +8242,14 @@
       "라떼",
       "음료",
       "디저트",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "24710488",
@@ -7047,7 +8283,7 @@
       "음료",
       "디저트",
       "서면1번가",
-      "음료"
+      "대화"
     ],
     "situationKeywords": [
       "카페데이트",
@@ -7055,12 +8291,16 @@
       "시험후위로",
       "비오는날",
       "휴식",
-      "점심가능"
+      "점심가능",
+      "화해",
+      "조용한대화"
     ],
     "moodKeywords": [
       "대화하기좋음",
       "휴식",
-      "감성"
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -7072,8 +8312,14 @@
       "라떼",
       "음료",
       "디저트",
-      "서면1번가"
-    ]
+      "서면1번가",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1683904404",
@@ -7106,22 +8352,26 @@
       "추리게임",
       "테마룸",
       "협동 플레이",
-      "방탈출",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류",
+      "방탈출/추리게임"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7133,8 +8383,15 @@
       "추리게임",
       "테마룸",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "699578399",
@@ -7171,19 +8428,31 @@
       "서면역",
       "타로",
       "사주",
-      "상담"
+      "상담",
+      "대화",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "이색데이트",
-      "대화거리"
+      "대화거리",
+      "화해",
+      "시험후위로",
+      "조용한대화",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "재미요소"
+      "재미요소",
+      "감성",
+      "조용함",
+      "편한",
+      "재미",
+      "활동형"
     ],
     "avoidKeywords": [
       "진지한화해대화주의"
@@ -7196,8 +8465,16 @@
       "음료",
       "디저트",
       "중간경유지",
-      "서면역"
-    ]
+      "서면역",
+      "대화",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1067694833",
@@ -7233,9 +8510,9 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7244,12 +8521,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -7263,8 +8544,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "28574930",
@@ -7299,20 +8586,33 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "카페",
+      "디저트",
+      "대화",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "화해",
+      "시험후위로",
+      "조용한대화",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "감성",
+      "조용함",
+      "편한",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7325,8 +8625,18 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "카페",
+      "디저트",
+      "대화",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1215657298",
@@ -7362,9 +8672,9 @@
       "프로필",
       "기념사진",
       "서면2번가",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7373,12 +8683,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -7392,8 +8706,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1779759976",
@@ -7428,20 +8748,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7454,8 +8778,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "178667099",
@@ -7489,21 +8820,34 @@
       "타로 상담",
       "사주 상담",
       "운세 상담",
-      "타로",
-      "사주",
-      "상담"
+      "상담",
+      "카페",
+      "디저트",
+      "대화",
+      "활동형",
+      "짧은체류",
+      "타로/사주"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "이색데이트",
-      "대화거리"
+      "대화거리",
+      "화해",
+      "시험후위로",
+      "조용한대화",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "재미요소"
+      "재미요소",
+      "감성",
+      "조용함",
+      "편한",
+      "재미",
+      "활동형"
     ],
     "avoidKeywords": [
       "진지한화해대화주의"
@@ -7515,8 +8859,18 @@
       "타로 상담",
       "사주 상담",
       "운세 상담",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "카페",
+      "디저트",
+      "대화",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1722707439",
@@ -7552,9 +8906,9 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7563,12 +8917,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -7582,8 +8940,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "378468032",
@@ -7618,20 +8982,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7644,8 +9012,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "629764977",
@@ -7680,20 +9055,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7706,8 +9085,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "310013350",
@@ -7742,20 +9128,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -7768,8 +9158,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1339365185",
@@ -7805,7 +9202,8 @@
       "디저트",
       "서면역",
       "휴식",
-      "체험"
+      "체험",
+      "대화"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7813,13 +9211,18 @@
       "어색함풀기",
       "피로회복",
       "비오는날",
-      "힐링"
+      "힐링",
+      "화해",
+      "시험후위로",
+      "조용한대화"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "조용함",
-      "휴식중심"
+      "휴식중심",
+      "감성",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -7832,8 +9235,14 @@
       "음료",
       "디저트",
       "중간경유지",
-      "서면역"
-    ]
+      "서면역",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1180139659",
@@ -7869,9 +9278,9 @@
       "프로필",
       "기념사진",
       "서면2번가",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7880,12 +9289,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -7899,8 +9312,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1931140525",
@@ -7936,9 +9355,9 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -7947,12 +9366,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -7966,8 +9389,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "261276767",
@@ -8003,9 +9432,9 @@
       "프로필",
       "기념사진",
       "서면2번가",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -8014,12 +9443,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8033,8 +9466,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "7977021",
@@ -8069,21 +9508,25 @@
       "사주 상담",
       "운세 상담",
       "전포카페거리",
-      "타로",
-      "사주",
-      "상담"
+      "상담",
+      "활동형",
+      "짧은체류",
+      "타로/사주"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "이색데이트",
-      "대화거리"
+      "대화거리",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "재미요소"
+      "재미요소",
+      "재미",
+      "활동형"
     ],
     "avoidKeywords": [
       "진지한화해대화주의"
@@ -8096,8 +9539,15 @@
       "사주 상담",
       "운세 상담",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "351645218",
@@ -8131,18 +9581,25 @@
       "라떼",
       "음료",
       "디저트",
-      "부전동"
+      "부전동",
+      "대화"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "화해",
+      "시험후위로",
+      "조용한대화"
     ],
     "moodKeywords": [
       "짧은체류",
-      "이색데이트"
+      "이색데이트",
+      "감성",
+      "조용함",
+      "편한"
     ],
     "avoidKeywords": [
       "없음"
@@ -8155,8 +9612,14 @@
       "음료",
       "디저트",
       "중간경유지",
-      "부전동"
-    ]
+      "부전동",
+      "대화"
+    ],
+    "estimatedPricePerPerson": "6000~12000",
+    "estimatedPriceCouple": "12000~24000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "194044190",
@@ -8192,9 +9655,9 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -8203,12 +9666,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8222,8 +9689,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1126913940",
@@ -8259,21 +9732,25 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "추억남기기",
-      "초반커플"
+      "초반커플",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8287,8 +9764,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "665041653",
@@ -8323,20 +9806,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -8349,8 +9836,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "137-카타르시스 이스케이프 서면점",
@@ -8385,20 +9879,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -8411,8 +9909,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "308581366",
@@ -8447,20 +9952,24 @@
       "추리",
       "협동 플레이",
       "실내활동",
-      "체험"
+      "체험",
+      "활동형",
+      "짧은체류"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "비오는날",
-      "실내데이트"
+      "실내데이트",
+      "분위기전환"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
       "협동플레이",
-      "활동형"
+      "활동형",
+      "재미"
     ],
     "avoidKeywords": [
       "조용한화해대화비추천",
@@ -8473,8 +9982,15 @@
       "테마룸",
       "추리",
       "협동 플레이",
-      "중간경유지"
-    ]
+      "중간경유지",
+      "활동형",
+      "짧은체류"
+    ],
+    "estimatedPricePerPerson": "5000~22000",
+    "estimatedPriceCouple": "10000~44000",
+    "priceTier": "보통",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "2087302333",
@@ -8510,21 +10026,25 @@
       "프로필",
       "기념사진",
       "서면2번가",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "추억남기기",
-      "초반커플"
+      "초반커플",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8538,8 +10058,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "서면2번가"
-    ]
+      "서면2번가",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "1052121698",
@@ -8575,9 +10101,9 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
@@ -8586,12 +10112,16 @@
       "추억남기기",
       "초반커플",
       "늦은시간가능",
-      "밤데이트"
+      "밤데이트",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8605,8 +10135,14 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   },
   {
     "id": "441787137",
@@ -8642,21 +10178,25 @@
       "프로필",
       "기념사진",
       "전포카페거리",
-      "사진",
-      "포토부스",
-      "촬영"
+      "촬영",
+      "추억",
+      "사진/포토부스"
     ],
     "situationKeywords": [
       "중간경유지",
       "기분전환",
       "어색함풀기",
       "추억남기기",
-      "초반커플"
+      "초반커플",
+      "분위기전환",
+      "화해보조"
     ],
     "moodKeywords": [
       "짧은체류",
       "이색데이트",
-      "가벼운경유"
+      "가벼운경유",
+      "활동형",
+      "가벼움"
     ],
     "avoidKeywords": [
       "사진싫은날비추천"
@@ -8670,7 +10210,13 @@
       "프로필",
       "기념사진",
       "중간경유지",
-      "전포카페거리"
-    ]
+      "전포카페거리",
+      "추억"
+    ],
+    "estimatedPricePerPerson": "4000~15000",
+    "estimatedPriceCouple": "8000~30000",
+    "priceTier": "저예산",
+    "keywordSource": "db+rule_based",
+    "priceSource": "category_keyword_estimate"
   }
 ]

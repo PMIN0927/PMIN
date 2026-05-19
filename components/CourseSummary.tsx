@@ -3,16 +3,24 @@ import PlaceCard from "./PlaceCard";
 
 export default function CourseSummary({ course }: { course: Course }) {
   const mainPlaces = [course.mealPlace, course.cafePlace, course.barPlace].filter(Boolean) as Place[];
+  const tags = course.extractedTags || [];
 
   return (
     <section className="space-y-4">
       <div className="rounded-[1.75rem] bg-roseApp p-5 text-white shadow-card">
-        <p className="text-sm font-bold opacity-80">선택한 코스</p>
+        <p className="text-sm font-bold opacity-80">선택된 코스</p>
         <h2 className="mt-2 text-2xl font-black">이 순서로 가보세요</h2>
-        <p className="mt-3 text-sm leading-6 opacity-90">
-          식사, 대화나 한 잔, 그리고 중간에 들를 만한 장소를 한 번에 묶었어요.
-        </p>
+        <p className="mt-3 text-sm leading-6 opacity-90">식사, 카페나 술집, 그리고 중간에 들르기 좋은 장소를 오늘 상황에 맞춰 묶었어요.</p>
         <div className="mt-4 rounded-2xl bg-white/20 p-3 text-sm font-bold">예상 이동거리 약 {course.totalDistance.toFixed(1)}km</div>
+        {tags.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {tags.slice(0, 5).map((tag) => (
+              <span key={tag} className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="space-y-3">

@@ -44,7 +44,7 @@ export function savePreference(value: UserPreference) {
 
 export function loadPreference(): UserPreference {
   if (typeof window === "undefined") return defaultPreference;
-  return JSON.parse(localStorage.getItem(keys.preference) || JSON.stringify(defaultPreference));
+  return safeJson(localStorage.getItem(keys.preference), defaultPreference);
 }
 
 export function saveTodayCondition(value: TodayCondition) {
@@ -53,7 +53,7 @@ export function saveTodayCondition(value: TodayCondition) {
 
 export function loadTodayCondition(): TodayCondition {
   if (typeof window === "undefined") return defaultToday;
-  return JSON.parse(localStorage.getItem(keys.today) || JSON.stringify(defaultToday));
+  return safeJson(localStorage.getItem(keys.today), defaultToday);
 }
 
 export function saveCourse(value: Course) {
@@ -62,6 +62,14 @@ export function saveCourse(value: Course) {
 
 export function loadCourse(): Course | null {
   if (typeof window === "undefined") return null;
-  const raw = localStorage.getItem(keys.course);
-  return raw ? JSON.parse(raw) : null;
+  return safeJson(localStorage.getItem(keys.course), null);
+}
+
+function safeJson<T>(raw: string | null, fallback: T): T {
+  if (!raw) return fallback;
+  try {
+    return JSON.parse(raw) as T;
+  } catch {
+    return fallback;
+  }
 }

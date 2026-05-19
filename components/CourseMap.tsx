@@ -16,7 +16,7 @@ type MapPlace = {
 };
 
 function hasCoordinate(place?: Place): place is Place {
-  return Boolean(place?.latitude && place?.longitude);
+  return typeof place?.latitude === "number" && typeof place?.longitude === "number";
 }
 
 function mapPlaces(course: Course): MapPlace[] {
@@ -31,32 +31,37 @@ function mapPlaces(course: Course): MapPlace[] {
 
 function markerHtml(item: MapPlace) {
   const isWaypoint = item.kind === "waypoint";
-  const size = isWaypoint ? 22 : 34;
+  const size = isWaypoint ? 24 : 36;
   const color = isWaypoint ? "#7c3aed" : "#ff5c8a";
   const label = isWaypoint ? "+" : String(item.order);
   return `
     <div style="
       width:${size}px;height:${size}px;border-radius:999px;background:${color};color:white;
-      display:grid;place-items:center;font-size:${isWaypoint ? 11 : 15}px;font-weight:900;
+      display:grid;place-items:center;font-size:${isWaypoint ? 12 : 15}px;font-weight:900;
       border:${isWaypoint ? 2 : 3}px solid white;box-shadow:0 8px 22px rgba(31,23,31,.18);
+      cursor:pointer;
     ">${label}</div>
   `;
 }
 
 function labelHtml(item: MapPlace) {
+  const safeName = item.place.name.replace(/[<>&]/g, "");
   return `
     <div style="
-      transform:translateY(10px);background:white;border:1px solid #ffe4ec;border-radius:14px;
+      transform:translateY(12px);background:white;border:1px solid #ffe4ec;border-radius:14px;
       padding:7px 10px;font-size:12px;font-weight:700;color:#2f2630;
       box-shadow:0 8px 24px rgba(31,23,31,.12);white-space:nowrap;
     ">
-      ${item.kind === "waypoint" ? "경유지" : `${item.order}번`} · ${item.place.name}
+      ${item.kind === "waypoint" ? "경유지" : `${item.order}번`} · ${safeName}
     </div>
   `;
 }
 
 export default function CourseMap({ course }: { course: Course }) {
   const ref = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<any>(null);
+  const boundsRef = useRef<any>(null);
+  const centerRef = useRef<any>(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -64,20 +69,49 @@ export default function CourseMap({ course }: { course: Course }) {
   const courseItems = items.filter((item) => item.kind === "course");
   const visibleItems = expanded ? items : items.slice(0, 3);
 
+  const relayoutMap = () => {
+    const map = mapRef.current;
+    if (!map || !window.kakao?.maps) return;
+    window.setTimeout(() => {
+      map.relayout();
+      if (boundsRef.current && items.length > 1) map.setBounds(boundsRef.current);
+      else if (centerRef.current) map.setCenter(centerRef.current);
+    }, 80);
+  };
+
+  useEffect(() => {
+    relayoutMap();
+  }, [expanded]);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new ResizeObserver(() => relayoutMap());
+    observer.observe(ref.current);
+    window.addEventListener("resize", relayoutMap);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", relayoutMap);
+    };
+  }, [items.length]);
+
   useEffect(() => {
     setIsLoaded(false);
     setErrorMessage("");
+    mapRef.current = null;
+    boundsRef.current = null;
+    centerRef.current = null;
+
     if (!ref.current || items.length === 0) return;
     const key = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
     if (!key || key.includes("your_")) {
-      setErrorMessage(".env.local에 NEXT_PUBLIC_KAKAO_JS_KEY를 실제 JavaScript 키로 넣어주세요.");
+      setErrorMessage("NEXT_PUBLIC_KAKAO_JS_KEY에 카카오 JavaScript 키를 넣어주세요.");
       return;
     }
 
     let cancelled = false;
     const render = () => {
-      if (!window.kakao || !ref.current || cancelled) {
-        setErrorMessage("Kakao Maps SDK를 불러오지 못했습니다.");
+      if (!window.kakao?.maps || !ref.current || cancelled) {
+        setErrorMessage("Kakao Maps SDK를 불러오지 못했어요.");
         return;
       }
       window.kakao.maps.load(() => {
@@ -86,6 +120,10 @@ export default function CourseMap({ course }: { course: Course }) {
         const first = items[0].place;
         const center = new window.kakao.maps.LatLng(first.latitude, first.longitude);
         const map = new window.kakao.maps.Map(ref.current, { center, level: 5 });
+
+        mapRef.current = map;
+        boundsRef.current = bounds;
+        centerRef.current = center;
 
         items.forEach((item) => {
           const position = new window.kakao.maps.LatLng(item.place.latitude, item.place.longitude);
@@ -105,6 +143,7 @@ export default function CourseMap({ course }: { course: Course }) {
             xAnchor: 0.5,
             zIndex: 20
           });
+
           window.kakao.maps.event.addListener(map, "click", () => label.setMap(null));
           const markerElement = marker.getContent();
           if (markerElement instanceof HTMLElement) {
@@ -123,14 +162,13 @@ export default function CourseMap({ course }: { course: Course }) {
             strokeStyle: "solid"
           });
         }
+
         if (items.length > 1) map.setBounds(bounds);
         window.setTimeout(() => {
-          if (cancelled || !ref.current) return;
-          map.relayout();
-          if (items.length > 1) map.setBounds(bounds);
-          else map.setCenter(center);
+          if (cancelled) return;
+          relayoutMap();
           setIsLoaded(true);
-        }, 120);
+        }, 150);
       });
     };
 
@@ -143,7 +181,7 @@ export default function CourseMap({ course }: { course: Course }) {
         script.dataset.kakaoMapSdk = "true";
         script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${key}&autoload=false`;
         script.async = true;
-        script.onerror = () => setErrorMessage("Kakao Maps SDK 스크립트 로딩에 실패했습니다. JavaScript 키와 등록 도메인을 확인해주세요.");
+        script.onerror = () => setErrorMessage("Kakao Maps SDK 로딩에 실패했어요. 카카오 JavaScript 키와 사이트 도메인을 확인해주세요.");
         script.onload = render;
         document.head.appendChild(script);
       }
@@ -186,7 +224,7 @@ export default function CourseMap({ course }: { course: Course }) {
       <ol className="space-y-2 p-4 text-sm">
         {visibleItems.map((item) => (
           <li key={`${item.place.id}-${item.kind}-${item.order}`} className="flex items-center gap-3">
-            <span className={`grid h-7 w-7 place-items-center rounded-full text-xs font-black text-white ${item.kind === "course" ? "bg-roseApp" : "bg-violet-600"}`}>
+            <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-full text-xs font-black text-white ${item.kind === "course" ? "bg-roseApp" : "bg-violet-600"}`}>
               {item.kind === "course" ? item.order : "+"}
             </span>
             <div className="min-w-0">

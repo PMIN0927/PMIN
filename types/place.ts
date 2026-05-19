@@ -26,6 +26,11 @@ export type Place = {
   moodKeywords: string[];
   avoidKeywords: string[];
   searchKeywords: string[];
+  estimatedPricePerPerson?: string;
+  estimatedPriceCouple?: string;
+  priceTier?: "저예산" | "보통" | "높음" | "확인필요" | string;
+  keywordSource?: string;
+  priceSource?: string;
 };
 
 export type UserPreference = {
@@ -38,7 +43,7 @@ export type UserPreference = {
 export type TodayCondition = {
   situationText: string;
   budget: string;
-  transport: "걸어서요" | "대중교통을 이용해요" | "차량을 이용해요";
+  transport: string;
   meetingTime: string;
 };
 
@@ -51,4 +56,5 @@ export type Course = {
   waypoints: Place[];
   totalDistance: number;
   estimatedTime: number;
+  extractedTags?: string[];
 };
