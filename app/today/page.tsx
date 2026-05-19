@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import BottomButton from "@/components/BottomButton";
-import { loadTodayCondition, saveTodayCondition } from "@/lib/storage";
+import { loadTodayCondition, resetOnboarding, saveTodayCondition } from "@/lib/storage";
 
 const quick = ["화해하고 싶어요", "시험 끝나고 쉬고 싶어요", "기분전환하고 싶어요", "돈 아끼고 싶어요", "조용히 대화하고 싶어요", "술 한잔하고 싶어요", "그냥 추천받을래요"];
 
@@ -32,6 +32,16 @@ export default function TodayPage() {
           다음으로
         </BottomButton>
       </div>
+      <button
+        type="button"
+        onClick={() => {
+          resetOnboarding();
+          router.push("/onboarding");
+        }}
+        className="mt-4 w-full rounded-2xl border border-rose-100 bg-white px-5 py-4 text-sm font-extrabold text-zinc-500 shadow-sm transition active:scale-[0.99]"
+      >
+        처음부터 다시 선택할래요
+      </button>
     </main>
   );
 }

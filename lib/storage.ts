@@ -31,6 +31,13 @@ export function completeOnboarding() {
   localStorage.setItem(keys.onboardingComplete, "true");
 }
 
+export function resetOnboarding() {
+  localStorage.removeItem(keys.onboardingComplete);
+  localStorage.removeItem(keys.preference);
+  localStorage.removeItem(keys.today);
+  localStorage.removeItem(keys.course);
+}
+
 export function savePreference(value: UserPreference) {
   localStorage.setItem(keys.preference, JSON.stringify(value));
 }
