@@ -8,23 +8,22 @@ type Props = {
   selected?: boolean;
   cta?: string;
   compact?: boolean;
+  reason?: string;
 };
 
-export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 할래요", compact = false }: Props) {
+export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 할래요", compact = false, reason }: Props) {
   const menus = [place.menu1, place.menu2, place.menu3].filter(Boolean);
   const mapUrl = place.naverMapUrl || place.kakaoMapUrl;
   const tags = [...(place.situationKeywords || []), ...(place.moodKeywords || [])].slice(0, 4);
 
   return (
-    <article className={`rounded-[1.75rem] border bg-white ${compact ? "p-4 pl-12" : "p-5"} shadow-card ${selected ? "border-roseApp" : "border-rose-100"}`}>
+    <article className={`rounded-[1.75rem] border bg-white ${compact ? "p-4 pl-12" : "p-5"} shadow-card ${selected ? "border-roseApp" : "border-zinc-100"}`}>
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-xs font-bold text-roseApp">{place.role || place.category || "데이트 장소"}</p>
+          <p className="text-xs font-black text-roseApp">{place.role || place.category || "데이트 장소"}</p>
           <h3 className={`${compact ? "text-lg" : "text-xl"} mt-1 font-black text-ink`}>{place.name}</h3>
         </div>
-        <span className="shrink-0 rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-600">
-          {place.latitude && place.longitude ? "지도 가능" : "좌표 없음"}
-        </span>
+        <span className="shrink-0 rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-600">{place.latitude && place.longitude ? "지도 가능" : "좌표 없음"}</span>
       </div>
 
       <p className="mt-3 text-sm leading-6 text-zinc-600">{place.description || place.detailCategory || place.category || "방문 전 상세 정보를 확인해보세요."}</p>
@@ -70,8 +69,8 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
       )}
 
       {!compact && (
-        <p className="mt-4 rounded-2xl bg-roseSoft p-3 text-sm font-medium leading-6 text-rose-700">
-          {tags.length > 0 ? `${tags.slice(0, 2).join(", ")} 상황에 잘 맞는 후보예요.` : "오늘 코스 후보로 잘 맞는 장소예요."}
+        <p className="mt-4 rounded-2xl bg-roseSoft p-3 text-sm font-bold leading-6 text-rose-700">
+          {reason || "오늘 입력한 조건과 장소 키워드를 비교해서 추천한 후보예요."}
         </p>
       )}
 

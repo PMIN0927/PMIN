@@ -6,6 +6,7 @@ import BottomButton from "@/components/BottomButton";
 import LoadingScreen from "@/components/LoadingScreen";
 import PlaceCard from "@/components/PlaceCard";
 import { loadPlaces } from "@/lib/loadPlaces";
+import { buildPlaceReason } from "@/lib/recommendReason";
 import { loadPreference, loadTodayCondition, saveCourse } from "@/lib/storage";
 import { makeCourseFromSelection, pickCandidates } from "@/lib/recommender";
 import type { Place } from "@/types/place";
@@ -18,7 +19,7 @@ const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: str
     role: "식사",
     title: "먼저 식사 장소를 골라주세요",
     refresh: "다른 식사 후보 보기",
-    helper: "오늘 기분, 예산, 취향 키워드에 맞춰 식사 카드 3개를 골랐어요.",
+    helper: "음식 취향, 분위기, 오늘 문장을 같이 보고 후보를 골랐어요.",
     loading: "식사 후보를 다시 고르는 중이에요"
   },
   {
@@ -26,7 +27,7 @@ const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: str
     role: "카페",
     title: "카페도 들러볼까요?",
     refresh: "다른 카페 후보 보기",
-    helper: "대화하기 좋은 카페 후보예요. 원하면 건너뛰어도 괜찮아요.",
+    helper: "대화하기 좋은 곳과 쉬어가기 좋은 곳을 우선으로 봤어요.",
     loading: "카페 후보를 다시 고르는 중이에요"
   },
   {
@@ -34,7 +35,7 @@ const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: str
     role: "술",
     title: "마지막으로 한잔할 곳을 골라볼까요?",
     refresh: "다른 술집 후보 보기",
-    helper: "식사 뒤 분위기를 이어가기 좋은 술집 후보예요.",
+    helper: "오늘 분위기를 이어가기 좋은 술집 후보예요.",
     loading: "술집 후보를 다시 고르는 중이에요"
   }
 ];
@@ -96,21 +97,24 @@ export default function CardModePage() {
   };
 
   if (isLoading) {
-    return <LoadingScreen title={loadingText} description="잠깐만요. 오늘 상황에 맞는 다음 후보를 정리하고 있어요." />;
+    return <LoadingScreen title={loadingText} description="잠깐만요. 취향과 오늘 상황에 맞는 다음 후보를 정리하고 있어요." />;
   }
 
   return (
-    <main className="min-h-screen bg-white px-6 py-8 safe-bottom">
-      <div className="flex items-center justify-between">
-        <p className="text-sm font-bold text-roseApp">카드로 직접 고르기</p>
+    <main className="min-h-screen bg-white px-6 py-6 safe-bottom">
+      <header className="flex items-center justify-between">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-zinc-300">Course Builder</p>
+          <p className="mt-1 text-sm font-black text-ink">카드로 직접 고르기</p>
+        </div>
         <span className="rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-700">{stepIndex + 1}/3</span>
-      </div>
-      <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-blue-100">
-        <div className="h-full rounded-full bg-blue-400 transition-all duration-500" style={{ width: `${progress}%` }} />
+      </header>
+      <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-zinc-100">
+        <div className="h-full rounded-full bg-roseApp transition-all duration-500" style={{ width: `${progress}%` }} />
       </div>
 
       <section key={current.key} className="soft-enter">
-        <h1 className="mt-10 text-3xl font-black leading-tight text-ink">{current.title}</h1>
+        <h1 className="mt-9 text-[28px] font-black leading-tight text-ink">{current.title}</h1>
         <p className="mt-3 text-sm leading-6 text-zinc-500">{current.helper}</p>
         <SelectedPreview selection={selection} />
 
@@ -125,7 +129,9 @@ export default function CardModePage() {
           {candidates.length === 0 ? (
             <div className="rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요.</div>
           ) : (
-            candidates.map((place) => <PlaceCard key={place.id} place={place} onSelect={() => selectPlace(place)} cta="이걸로 할래요" />)
+            candidates.map((place) => (
+              <PlaceCard key={place.id} place={place} reason={buildPlaceReason(place, preference, today)} onSelect={() => selectPlace(place)} cta="이걸로 할래요" />
+            ))
           )}
         </div>
       </section>

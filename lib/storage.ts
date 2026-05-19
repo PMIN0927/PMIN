@@ -10,10 +10,10 @@ const keys = {
 };
 
 export const defaultPreference: UserPreference = {
-  moods: ["편한"],
-  foods: ["한식", "일식", "카페", "술집"],
+  moods: ["편한", "깔끔한", "감성적인"],
+  foods: ["한식", "일식", "샤브샤브"],
   dislikes: [],
-  dateStyles: ["맛집 가고 술 한잔"]
+  dateStyles: []
 };
 
 export const defaultToday: TodayCondition = {
