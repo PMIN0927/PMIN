@@ -21,7 +21,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["일식", "라멘", "캐주얼", "혼밥가능"],
       situationKeywords: ["무난한코스", "저예산", "시험후위로"],
-      moodKeywords: ["캐주얼", "활기찬"],
+      moodKeywords: ["캐주얼", "활기찬", "편한"],
       avoidKeywords: ["조용한화해주의"],
       estimatedPricePerPerson: "10000~17000",
       priceTier: "저예산"
@@ -32,7 +32,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["일식", "깔끔함", "데이트식사"],
       situationKeywords: ["소개팅", "무난한코스", "기분전환"],
-      moodKeywords: ["깔끔함", "감성", "차분함"],
+      moodKeywords: ["깔끔함", "깔끔한", "감성", "감성적인", "차분함"],
       avoidKeywords: ["비쌈주의"],
       estimatedPricePerPerson: "18000~35000",
       priceTier: "보통"
@@ -43,7 +43,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["양식", "감성", "데이트식사"],
       situationKeywords: ["소개팅", "기분전환", "화해"],
-      moodKeywords: ["감성", "깔끔함"],
+      moodKeywords: ["감성", "감성적인", "깔끔함", "깔끔한", "로맨틱한"],
       estimatedPricePerPerson: "16000~30000",
       priceTier: "보통"
     }
@@ -53,7 +53,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["한식", "가성비", "든든함"],
       situationKeywords: ["돈없는날", "시험후위로", "무난한코스"],
-      moodKeywords: ["편한", "캐주얼"],
+      moodKeywords: ["편한", "가성비", "캐주얼"],
       estimatedPricePerPerson: "8000~14000",
       priceTier: "저예산"
     }
@@ -63,7 +63,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["고기", "술안주", "활기찬"],
       situationKeywords: ["기분전환", "술데이트"],
-      moodKeywords: ["활기찬", "캐주얼"],
+      moodKeywords: ["활기찬", "캐주얼", "편한"],
       avoidKeywords: ["조용한화해주의", "소음주의", "웨이팅주의"],
       estimatedPricePerPerson: "18000~35000",
       priceTier: "보통"
@@ -74,7 +74,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["술", "안주", "2차"],
       situationKeywords: ["술데이트", "기분전환", "2차", "밤데이트"],
-      moodKeywords: ["활기찬", "감성술집", "야간데이트"],
+      moodKeywords: ["활기찬", "감성술집", "감성적인", "힙한", "로맨틱한", "야간데이트"],
       avoidKeywords: ["조용한화해주의", "소음주의"],
       estimatedPricePerPerson: "20000~35000",
       priceTier: "보통"
@@ -85,7 +85,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["카페", "디저트", "대화"],
       situationKeywords: ["화해", "시험후위로", "조용한대화", "비오는날"],
-      moodKeywords: ["감성", "조용함", "편한"],
+      moodKeywords: ["감성", "감성적인", "조용함", "조용한", "편한", "아늑한", "실내 위주"],
       estimatedPricePerPerson: "6000~12000",
       priceTier: "저예산"
     }
@@ -95,7 +95,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["사진", "포토부스", "추억"],
       situationKeywords: ["중간경유지", "분위기전환", "초반커플", "화해보조"],
-      moodKeywords: ["활동형", "가벼움"],
+      moodKeywords: ["활동형", "가벼움", "사진 찍기 좋은", "실내 위주"],
       estimatedPricePerPerson: "4000~15000",
       priceTier: "저예산"
     }
@@ -105,7 +105,7 @@ const keywordRules: Array<{
     add: {
       coreKeywords: ["활동형", "중간경유지", "짧은체류"],
       situationKeywords: ["중간경유지", "분위기전환", "기분전환", "어색함풀기"],
-      moodKeywords: ["재미", "활동형", "캐주얼"],
+      moodKeywords: ["재미", "활동형", "캐주얼", "실내 위주", "활기찬"],
       estimatedPricePerPerson: "5000~22000",
       priceTier: "보통"
     }

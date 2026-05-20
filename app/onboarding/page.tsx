@@ -187,7 +187,6 @@ export default function OnboardingPage() {
       </div>
       <section className="mt-7 space-y-5">
         <SelectBlock title="예산은 어느 정도인가요?" values={["1만원", "2만원", "3만원", "5만원", "제한없음"]} value={today.budget} onChange={(budget) => setToday({ ...today, budget })} />
-        <SelectBlock title="어떻게 이동하나요?" values={["걸어서요", "대중교통을 이용해요", "차량을 이용해요"]} value={today.transport} onChange={(transport) => setToday({ ...today, transport })} />
         <label className="block rounded-[28px] border border-zinc-100 bg-white p-5 shadow-card">
           <span className="text-sm font-black text-ink">몇 시에 만나나요?</span>
           <input type="time" value={today.meetingTime} onChange={(event) => setToday({ ...today, meetingTime: event.target.value })} className="mt-3 w-full rounded-2xl bg-zinc-50 p-3 font-bold text-ink outline-none" />
