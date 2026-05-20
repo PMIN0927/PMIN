@@ -58,8 +58,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-
-        {heartCount > 0 && heartCount < 5 && <p className="mt-4 text-xs font-bold text-rose-400">개발자 모드 {heartCount}/5</p>}
       </section>
 
       <BottomButton href="/onboarding">추천 받으러 가기</BottomButton>
