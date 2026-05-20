@@ -117,6 +117,7 @@ export default function DevPage() {
 
 function DevPlaceCard({ place, isManual, onChangeRole, onReset }: { place: Place; isManual: boolean; onChangeRole: (role: EditableRole) => void; onReset: () => void }) {
   const role = getEffectiveRole(place);
+  const mapUrl = place.naverMapUrl || place.kakaoMapUrl;
 
   return (
     <article className="rounded-[28px] border border-zinc-100 bg-white p-4 shadow-card">
@@ -140,6 +141,12 @@ function DevPlaceCard({ place, isManual, onChangeRole, onReset }: { place: Place
           </button>
         ))}
       </div>
+
+      {mapUrl && (
+        <a href={mapUrl} target="_blank" className="mt-3 block w-full rounded-2xl bg-zinc-50 px-4 py-3 text-center text-sm font-black text-zinc-600">
+          지도 열기
+        </a>
+      )}
 
       {isManual && (
         <button onClick={onReset} className="mt-3 w-full rounded-2xl bg-roseSoft px-4 py-3 text-sm font-black text-rose-700">
