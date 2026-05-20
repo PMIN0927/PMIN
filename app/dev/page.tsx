@@ -62,6 +62,18 @@ export default function DevPage() {
     setVersion((value) => value + 1);
   };
 
+  const fillFromNaverLink = () => {
+    const inferred = inferFromNaverMapUrl(form.naverMapUrl);
+    if (!inferred) return;
+    setForm({
+      ...form,
+      name: form.name || inferred.name,
+      role: inferred.role,
+      category: form.category || inferred.category,
+      description: form.description || inferred.description
+    });
+  };
+
   return (
     <main className="min-h-screen bg-white px-5 py-6 safe-bottom">
       <header className="flex items-center justify-between">
@@ -97,6 +109,9 @@ export default function DevPage() {
                 <input value={form.category} onChange={(event) => setForm({ ...form, category: event.target.value })} placeholder="세부 장르 예: 초밥, 이자카야, 포토부스" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
                 <input value={form.description} onChange={(event) => setForm({ ...form, description: event.target.value })} placeholder="설명 예: 조용한 초밥집" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
                 <input value={form.naverMapUrl} onChange={(event) => setForm({ ...form, naverMapUrl: event.target.value })} placeholder="네이버 지도 링크" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+                <button type="button" onClick={fillFromNaverLink} className="w-full rounded-2xl bg-roseSoft px-4 py-3 text-sm font-black text-rose-700">
+                  네이버 링크로 자동 채우기
+                </button>
                 <input value={form.openingHours} onChange={(event) => setForm({ ...form, openingHours: event.target.value })} placeholder="운영시간 예: 11:00~22:00" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
               </div>
               <button onClick={addPlace} disabled={!form.name.trim()} className="mt-4 w-full rounded-2xl bg-ink px-4 py-3 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
@@ -203,4 +218,75 @@ function roleEmoji(role: string) {
   if (role === "카페") return "☕";
   if (role === "중간경유지") return "📸";
   return "💗";
+}
+
+function inferFromNaverMapUrl(url: string): CustomPlaceInput | null {
+  const query = extractSearchQuery(url);
+  if (!query) return null;
+  const name = query.replace(/\s*부산진구\s*/g, " ").replace(/\s+/g, " ").trim();
+  const text = name.toLowerCase();
+
+  if (/카페|커피|디저트|베이커리|빙수|찻집/.test(name)) {
+    return {
+      name,
+      role: "카페",
+      category: "카페",
+      description: "카페 또는 디저트 장소",
+      naverMapUrl: url,
+      openingHours: ""
+    };
+  }
+
+  if (/술집|이자카야|주점|포차|바|하이볼|맥주|와인|야키토리|오뎅|꼬치/.test(name)) {
+    return {
+      name,
+      role: "술",
+      category: "술집",
+      description: "술과 안주를 즐기는 장소",
+      naverMapUrl: url,
+      openingHours: ""
+    };
+  }
+
+  if (/포토|사진|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|사주|소품/.test(name)) {
+    return {
+      name,
+      role: "중간경유지",
+      category: "중간경유지",
+      description: "데이트 중간에 들르기 좋은 장소",
+      naverMapUrl: url,
+      openingHours: ""
+    };
+  }
+
+  return {
+    name,
+    role: "식사",
+    category: inferFoodCategory(name, text),
+    description: `${inferFoodCategory(name, text)} 계열 식사 장소`,
+    naverMapUrl: url,
+    openingHours: ""
+  };
+}
+
+function extractSearchQuery(url: string) {
+  try {
+    const decodedUrl = decodeURIComponent(url);
+    const match = decodedUrl.match(/\/search\/([^/?#]+)/);
+    if (match?.[1]) return match[1].trim();
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function inferFoodCategory(name: string, text: string) {
+  if (/초밥|스시|라멘|우동|돈까스|돈카츠|규카츠|일식/.test(name)) return "일식";
+  if (/파스타|피자|스테이크|양식|브런치/.test(name)) return "양식";
+  if (/마라|짬뽕|중식|양꼬치|훠궈/.test(name)) return "중식";
+  if (/고기|곱창|막창|구이|삼겹|갈비/.test(name)) return "고기";
+  if (/샤브/.test(name)) return "샤브샤브";
+  if (/국밥|칼국수|밀면|한식|순두부|백반/.test(name)) return "한식";
+  if (/버거|치킨/.test(text)) return "버거/치킨";
+  return "식사";
 }
