@@ -10,11 +10,21 @@ const quick = ["화해하고 싶어요", "시험 끝나고 쉬고 싶어요", "�
 export default function TodayPage() {
   const router = useRouter();
   const [today, setToday] = useState(loadTodayCondition());
+  const canContinue = today.situationText.trim().length > 0;
+
   return (
-    <main className="min-h-screen px-6 py-8 safe-bottom">
+    <main className="min-h-screen bg-white px-6 py-8 safe-bottom">
       <p className="text-sm font-bold text-roseApp">오늘 뭐해?</p>
-      <h1 className="mt-8 text-3xl font-black">지금 어떤 기분인가요?</h1>
-      <textarea value={today.situationText} onChange={(e) => setToday({ ...today, situationText: e.target.value })} className="mt-6 h-32 w-full rounded-3xl border border-rose-100 p-4 outline-none focus:border-roseApp" placeholder="예: 비 와서 실내 위주로 놀고 싶어" />
+      <h1 className="mt-8 text-3xl font-black text-ink">지금 어떤 기분인가요?</h1>
+      <p className="mt-3 text-sm leading-6 text-zinc-500">이 문장을 키워드로 분석해서 오늘 코스를 추천해요.</p>
+
+      <textarea
+        value={today.situationText}
+        onChange={(e) => setToday({ ...today, situationText: e.target.value })}
+        className="mt-6 h-32 w-full resize-none rounded-3xl border border-zinc-100 bg-zinc-50 p-4 outline-none transition focus:border-roseApp focus:bg-white"
+        placeholder="예: 오늘은 조용히 화해하고 싶어"
+      />
+
       <div className="mt-4 flex flex-wrap gap-2">
         {quick.map((item) => (
           <button key={item} onClick={() => setToday({ ...today, situationText: item })} className="rounded-full bg-roseSoft px-4 py-2 text-sm font-bold text-rose-700">
@@ -22,16 +32,22 @@ export default function TodayPage() {
           </button>
         ))}
       </div>
+
+      {!canContinue && <p className="mt-4 text-sm font-bold text-rose-500">상황을 한 문장으로 적거나 빠른 선택을 골라주세요.</p>}
+
       <div className="mt-10">
         <BottomButton
           onClick={() => {
+            if (!canContinue) return;
             saveTodayCondition(today);
             router.push("/final-step");
           }}
+          disabled={!canContinue}
         >
           다음으로
         </BottomButton>
       </div>
+
       <button
         type="button"
         onClick={() => {

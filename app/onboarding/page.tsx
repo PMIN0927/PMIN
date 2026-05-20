@@ -145,6 +145,7 @@ export default function OnboardingPage() {
 
   if (step === 3) {
     const detected = quick.find((item) => item === today.situationText);
+    const canContinueSituation = today.situationText.trim().length > 0;
     return (
       <OnboardingShell step={4} total={totalSteps} eyebrow="오늘 상태">
         <div className="mt-14 text-center">
@@ -172,8 +173,11 @@ export default function OnboardingPage() {
             </button>
           ))}
         </div>
+        {!canContinueSituation && <p className="mt-4 text-sm font-bold text-rose-500">상황을 한 문장으로 적거나 빠른 선택을 골라주세요.</p>}
         <div className="mt-8">
-          <BottomButton onClick={() => setStep(4)}>다음으로</BottomButton>
+          <BottomButton onClick={() => setStep(4)} disabled={!canContinueSituation}>
+            {canContinueSituation ? "다음으로" : "상황을 입력해주세요"}
+          </BottomButton>
         </div>
       </OnboardingShell>
     );

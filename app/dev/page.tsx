@@ -2,13 +2,25 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { saveCustomPlace, type CustomPlaceInput } from "@/lib/customPlaces";
 import { loadPlaces } from "@/lib/loadPlaces";
 import { getEffectiveRole } from "@/lib/placeRole";
 import { loadRoleOverrides, removeRoleOverride, roleOptions, saveRoleOverride, type EditableRole } from "@/lib/roleOverrides";
 import type { Place } from "@/types/place";
 
+const emptyForm: CustomPlaceInput = {
+  name: "",
+  role: "식사",
+  category: "",
+  description: "",
+  naverMapUrl: "",
+  openingHours: ""
+};
+
 export default function DevPage() {
   const [selectedRole, setSelectedRole] = useState<EditableRole | null>(null);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [form, setForm] = useState<CustomPlaceInput>(emptyForm);
   const [version, setVersion] = useState(0);
   const [copied, setCopied] = useState(false);
   const places = useMemo(loadPlaces, [version]);
@@ -42,6 +54,14 @@ export default function DevPage() {
     window.setTimeout(() => setCopied(false), 1600);
   };
 
+  const addPlace = () => {
+    if (!form.name.trim()) return;
+    saveCustomPlace(form);
+    setForm(emptyForm);
+    setShowAddForm(false);
+    setVersion((value) => value + 1);
+  };
+
   return (
     <main className="min-h-screen bg-white px-5 py-6 safe-bottom">
       <header className="flex items-center justify-between">
@@ -57,6 +77,34 @@ export default function DevPage() {
       {!selectedRole ? (
         <section className="mt-8">
           <p className="text-sm leading-6 text-zinc-500">검수할 장르를 선택하세요. 여기서 바꾼 장르는 이 브라우저에 저장되고 추천에도 바로 반영돼요.</p>
+
+          <button onClick={() => setShowAddForm((value) => !value)} className="mt-5 w-full rounded-[22px] bg-roseApp px-5 py-4 text-sm font-black text-white">
+            카드 추가하기
+          </button>
+
+          {showAddForm && (
+            <div className="mt-4 rounded-[28px] border border-rose-100 bg-white p-4 shadow-card">
+              <p className="text-sm font-black text-ink">새 카드 추가</p>
+              <div className="mt-4 space-y-3">
+                <input value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="가게 이름" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+                <select value={form.role} onChange={(event) => setForm({ ...form, role: event.target.value as EditableRole })} className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none">
+                  {roleOptions.map((role) => (
+                    <option key={role} value={role}>
+                      {role}
+                    </option>
+                  ))}
+                </select>
+                <input value={form.category} onChange={(event) => setForm({ ...form, category: event.target.value })} placeholder="세부 장르 예: 초밥, 이자카야, 포토부스" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+                <input value={form.description} onChange={(event) => setForm({ ...form, description: event.target.value })} placeholder="설명 예: 조용한 초밥집" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+                <input value={form.naverMapUrl} onChange={(event) => setForm({ ...form, naverMapUrl: event.target.value })} placeholder="네이버 지도 링크" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+                <input value={form.openingHours} onChange={(event) => setForm({ ...form, openingHours: event.target.value })} placeholder="운영시간 예: 11:00~22:00" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
+              </div>
+              <button onClick={addPlace} disabled={!form.name.trim()} className="mt-4 w-full rounded-2xl bg-ink px-4 py-3 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
+                추가 완료
+              </button>
+            </div>
+          )}
+
           <div className="mt-6 grid grid-cols-2 gap-3">
             {roleOptions.map((role) => {
               const count = places.filter((place) => getEffectiveRole(place) === role).length;
@@ -69,16 +117,12 @@ export default function DevPage() {
               );
             })}
           </div>
-          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">
-            현재 수동 변경: {Object.keys(overrides).length}개
-          </div>
-          <button
-            onClick={copyOverrides}
-            disabled={overrideItems.length === 0}
-            className="mt-3 w-full rounded-[22px] bg-ink px-5 py-4 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400"
-          >
+
+          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">현재 수동 변경: {Object.keys(overrides).length}개</div>
+          <button onClick={copyOverrides} disabled={overrideItems.length === 0} className="mt-3 w-full rounded-[22px] bg-ink px-5 py-4 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
             {copied ? "수정 내역 복사 완료" : "수정 내역 복사하기"}
           </button>
+
           {overrideItems.length > 0 && (
             <div className="mt-3 rounded-[22px] bg-zinc-50 p-4">
               <p className="text-xs font-black text-zinc-400">최근 수정 내역</p>
@@ -97,11 +141,9 @@ export default function DevPage() {
           <button onClick={() => setSelectedRole(null)} className="rounded-full bg-zinc-50 px-4 py-2 text-sm font-black text-zinc-500">
             ← 장르 다시 선택
           </button>
-          <div className="mt-5 flex items-end justify-between">
-            <div>
-              <p className="text-sm font-black text-roseApp">{selectedRole}</p>
-              <h2 className="mt-1 text-2xl font-black text-ink">전체 카드 {filtered.length}개</h2>
-            </div>
+          <div className="mt-5">
+            <p className="text-sm font-black text-roseApp">{selectedRole}</p>
+            <h2 className="mt-1 text-2xl font-black text-ink">전체 카드 {filtered.length}개</h2>
           </div>
 
           <div className="mt-5 space-y-4">
@@ -111,6 +153,8 @@ export default function DevPage() {
           </div>
         </section>
       )}
+
+      <p className="mt-10 pb-2 text-center text-[11px] font-bold text-zinc-300">채영아 사랑해</p>
     </main>
   );
 }
@@ -127,16 +171,12 @@ function DevPlaceCard({ place, isManual, onChangeRole, onReset }: { place: Place
           <h3 className="mt-1 truncate text-lg font-black text-ink">{place.name}</h3>
           <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-500">{place.detailCategory || place.category || place.description}</p>
         </div>
-        <span className="shrink-0 text-3xl">{roleEmoji(role as EditableRole)}</span>
+        <span className="shrink-0 text-3xl">{roleEmoji(role)}</span>
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-2">
         {roleOptions.map((option) => (
-          <button
-            key={option}
-            onClick={() => onChangeRole(option)}
-            className={`rounded-2xl px-3 py-3 text-sm font-black transition ${role === option ? "bg-roseApp text-white" : "bg-zinc-50 text-zinc-600"}`}
-          >
+          <button key={option} onClick={() => onChangeRole(option)} className={`rounded-2xl px-3 py-3 text-sm font-black transition ${role === option ? "bg-roseApp text-white" : "bg-zinc-50 text-zinc-600"}`}>
             {option}
           </button>
         ))}
