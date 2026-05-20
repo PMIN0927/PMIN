@@ -1,16 +1,31 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import BottomButton from "@/components/BottomButton";
 import { isOnboardingComplete } from "@/lib/storage";
 
 export default function HomePage() {
   const router = useRouter();
+  const [heartCount, setHeartCount] = useState(0);
+  const redirectTimer = useRef<number | null>(null);
 
   useEffect(() => {
-    if (isOnboardingComplete()) router.replace("/today");
+    if (!isOnboardingComplete()) return;
+    redirectTimer.current = window.setTimeout(() => router.replace("/today"), 1400);
+    return () => {
+      if (redirectTimer.current) window.clearTimeout(redirectTimer.current);
+    };
   }, [router]);
+
+  const tapHeart = () => {
+    if (redirectTimer.current) window.clearTimeout(redirectTimer.current);
+    setHeartCount((count) => {
+      const next = count + 1;
+      if (next >= 5) router.push("/dev");
+      return next;
+    });
+  };
 
   return (
     <main className="flex min-h-screen flex-col bg-white px-6 py-5 safe-bottom">
@@ -23,10 +38,10 @@ export default function HomePage() {
       </header>
 
       <section className="flex flex-1 flex-col justify-center pb-10 text-center">
-        <div className="mx-auto grid h-28 w-28 place-items-center rounded-[36px] bg-roseSoft text-6xl shadow-card">💗</div>
-        <h1 className="mx-auto mt-10 max-w-[320px] text-[27px] font-black leading-[1.25] text-ink">
-          오늘 데이트 예정이신가요?
-        </h1>
+        <button onClick={tapHeart} aria-label="developer mode" className="mx-auto grid h-28 w-28 place-items-center rounded-[36px] bg-roseSoft text-6xl shadow-card transition active:scale-95">
+          💗
+        </button>
+        <h1 className="mx-auto mt-10 max-w-[320px] text-[27px] font-black leading-[1.25] text-ink">오늘 데이트 예정이신가요?</h1>
         <p className="mx-auto mt-4 max-w-[310px] text-[15px] leading-7 text-zinc-500">
           두 분의 분위기에 어울리는 식사, 카페나 술집, 중간에 들를 곳까지 한 번에 추천해드릴게요.
         </p>
@@ -43,6 +58,8 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+
+        {heartCount > 0 && heartCount < 5 && <p className="mt-4 text-xs font-bold text-rose-400">개발자 모드 {heartCount}/5</p>}
       </section>
 
       <BottomButton href="/onboarding">추천 받으러 가기</BottomButton>
