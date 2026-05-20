@@ -1,5 +1,6 @@
 import type { Course, Place, TodayCondition, UserPreference } from "@/types/place";
 import { nearby, totalDistanceKm } from "./distance";
+import { getEffectiveRole } from "./placeRole";
 import { parseSituationTags, tokenizeUserText } from "./tagParser";
 import { isProbablyOpen } from "./timeFilter";
 
@@ -27,7 +28,7 @@ export function normalizeRole(role: string) {
 
 export function scorePlace(place: Place, role: string, preference: UserPreference, today: TodayCondition, blockedIds = new Set<string>()) {
   if (blockedIds.has(place.id)) return -999;
-  if (normalizeRole(place.role) !== role) return -100;
+  if (getEffectiveRole(place) !== role) return -100;
   if (!isProbablyOpen(place, today).ok) return -999;
 
   const userTokens = tokenizeUserText(today.situationText);
@@ -93,7 +94,7 @@ export function pickCandidates(
 export function recommendWaypoints(places: Place[], selection: CourseSelection, preference?: UserPreference, today?: TodayCondition) {
   const anchor = selection.cafe || selection.bar || selection.meal;
   const waypointPool = places
-    .filter((place) => normalizeRole(place.role) === "중간경유지" && place.latitude && place.longitude && (!today || isProbablyOpen(place, today).ok))
+    .filter((place) => getEffectiveRole(place) === "중간경유지" && place.latitude && place.longitude && (!today || isProbablyOpen(place, today).ok))
     .map((place) => ({
       place,
       score: preference && today ? scorePlace(place, "중간경유지", preference, today) : 0

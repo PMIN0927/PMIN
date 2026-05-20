@@ -1,6 +1,7 @@
 "use client";
 
 import type { Place } from "@/types/place";
+import { getEffectiveRole } from "@/lib/placeRole";
 
 type Props = {
   place: Place;
@@ -16,6 +17,7 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
   const mapUrl = place.naverMapUrl || place.kakaoMapUrl;
   const tags = [...(place.situationKeywords || []), ...(place.moodKeywords || [])].slice(0, 4);
   const visual = getPlaceVisual(place);
+  const displayRole = getEffectiveRole(place);
 
   return (
     <article className={`rounded-[1.75rem] border bg-white ${compact ? "p-4 pl-12" : "p-5"} shadow-card ${selected ? "border-roseApp" : "border-zinc-100"}`}>
@@ -33,7 +35,7 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
 
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-xs font-black text-roseApp">{place.role || place.category || "데이트 장소"}</p>
+          <p className="text-xs font-black text-roseApp">{displayRole || place.category || "데이트 장소"}</p>
           <h3 className={`${compact ? "text-lg" : "text-xl"} mt-1 font-black text-ink`}>{place.name}</h3>
         </div>
         <span className="shrink-0 rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-600">{place.latitude && place.longitude ? "지도 가능" : "좌표 없음"}</span>
@@ -91,28 +93,10 @@ export default function PlaceCard({ place, onSelect, selected, cta = "이걸로 
 }
 
 function getPlaceVisual(place: Place) {
-  const role = String(place.role || "");
+  const role = getEffectiveRole(place);
   const text = [place.category, place.detailCategory, place.description, place.name, ...(place.coreKeywords || [])].join(" ");
 
-  if (role.includes("식사") || /샤브|국밥|한식|고기|곱창|라멘|우동|초밥|스시|파스타|피자|돈까스|돈카츠|쌀국수|중식|분식|낙지|칼국수|밀면|버거|치킨|훠궈|양꼬치|규카츠/.test(text)) {
-    return {
-      emoji: pickMealEmoji(text),
-      label: "MEAL",
-      copy: "데이트의 시작은 든든하게",
-      gradient: "from-rose-300 to-orange-300"
-    };
-  }
-
-  if (role.includes("카페") || /카페|커피|디저트|베이커리|빙수|찻집/.test(text)) {
-    return {
-      emoji: "☕",
-      label: "CAFE",
-      copy: "잠깐 쉬어가는 달달한 시간",
-      gradient: "from-amber-300 to-rose-300"
-    };
-  }
-
-  if (role.includes("술") || /술|이자카야|바|포차|하이볼|맥주|와인|주점|야키토리|오뎅|꼬치/.test(text)) {
+  if (role === "술" || /술집|이자카야|바|포차|하이볼|맥주|와인|주점|야키토리|오뎅|꼬치/.test(text)) {
     return {
       emoji: "🍻",
       label: "DRINK",
@@ -121,7 +105,25 @@ function getPlaceVisual(place: Place) {
     };
   }
 
-  if (role.includes("중간경유지") || /사진|포토|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|소품/.test(text)) {
+  if (role === "식사" || /샤브|국밥|한식|고기|곱창|라멘|우동|초밥|스시|파스타|피자|돈까스|돈카츠|쌀국수|중식|분식|낙지|칼국수|밀면|버거|치킨|훠궈|양꼬치|규카츠/.test(text)) {
+    return {
+      emoji: pickMealEmoji(text),
+      label: "MEAL",
+      copy: "데이트의 시작은 든든하게",
+      gradient: "from-rose-300 to-orange-300"
+    };
+  }
+
+  if (role === "카페" || /카페|커피|디저트|베이커리|빙수|찻집/.test(text)) {
+    return {
+      emoji: "☕",
+      label: "CAFE",
+      copy: "잠깐 쉬어가는 달달한 시간",
+      gradient: "from-amber-300 to-rose-300"
+    };
+  }
+
+  if (role === "중간경유지" || /사진|포토|스튜디오|방탈출|보드게임|오락실|인형뽑기|가챠|타로|소품/.test(text)) {
     return {
       emoji: "📸",
       label: "PLAY",

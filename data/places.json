@@ -4432,7 +4432,7 @@
   {
     "id": "16243380",
     "name": "대림참치 서면점",
-    "role": "식사",
+    "role": "술",
     "category": "술",
     "detailCategory": "회/해산물 술집",
     "description": "회와 해산물 안주를 파는 술집",
@@ -4520,7 +4520,8 @@
     "estimatedPriceCouple": "36000~70000",
     "priceTier": "보통",
     "keywordSource": "db+rule_based",
-    "priceSource": "category_keyword_estimate"
+    "priceSource": "category_keyword_estimate",
+    "roleFixStatus": "술집키워드로역할수정"
   },
   {
     "id": "555235287",
