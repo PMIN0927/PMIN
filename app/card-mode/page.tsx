@@ -101,42 +101,59 @@ export default function CardModePage() {
   }
 
   return (
-    <main className="min-h-screen bg-white px-6 py-6 safe-bottom">
-      <header className="flex items-center justify-between">
-        <div>
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-zinc-300">Course Builder</p>
-          <p className="mt-1 text-sm font-black text-ink">카드로 직접 고르기</p>
+    <main className="min-h-screen bg-white py-6 safe-bottom">
+      <div className="px-6">
+        <header className="flex items-center justify-between">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-zinc-300">Course Builder</p>
+            <p className="mt-1 text-sm font-black text-ink">카드로 직접 고르기</p>
+          </div>
+          <span className="rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-700">{stepIndex + 1}/3</span>
+        </header>
+        <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-zinc-100">
+          <div className="h-full rounded-full bg-roseApp transition-all duration-500" style={{ width: `${progress}%` }} />
         </div>
-        <span className="rounded-full bg-roseSoft px-3 py-1 text-xs font-bold text-rose-700">{stepIndex + 1}/3</span>
-      </header>
-      <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-zinc-100">
-        <div className="h-full rounded-full bg-roseApp transition-all duration-500" style={{ width: `${progress}%` }} />
       </div>
 
       <section key={current.key} className="soft-enter">
-        <h1 className="mt-9 text-[28px] font-black leading-tight text-ink">{current.title}</h1>
-        <p className="mt-3 text-sm leading-6 text-zinc-500">{current.helper}</p>
-        <SelectedPreview selection={selection} />
+        <div className="px-6">
+          <h1 className="mt-9 text-[28px] font-black leading-tight text-ink">{current.title}</h1>
+          <p className="mt-3 text-sm leading-6 text-zinc-500">{current.helper}</p>
+          <SelectedPreview selection={selection} />
 
-        {current.key === "cafe" && (
-          <button onClick={() => selectPlace(undefined)} className="mt-5 w-full rounded-[1.75rem] bg-roseSoft p-5 text-left text-lg font-black text-rose-700 shadow-card">
-            카페는 건너뛸래요
-            <span className="mt-1 block text-sm font-medium text-rose-500">술집이나 중간경유지 중심으로 코스를 이어갈게요.</span>
-          </button>
-        )}
-
-        <div className="mt-6 space-y-4">
-          {candidates.length === 0 ? (
-            <div className="rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요.</div>
-          ) : (
-            candidates.map((place) => (
-              <PlaceCard key={place.id} place={place} reason={buildPlaceReason(place, preference, today)} onSelect={() => selectPlace(place)} cta="이걸로 할래요" />
-            ))
+          {current.key === "cafe" && (
+            <button onClick={() => selectPlace(undefined)} className="mt-5 w-full rounded-[1.75rem] bg-roseSoft p-5 text-left text-lg font-black text-rose-700 shadow-card">
+              카페는 건너뛸래요
+              <span className="mt-1 block text-sm font-medium text-rose-500">술집이나 중간경유지 중심으로 코스를 이어갈게요.</span>
+            </button>
           )}
         </div>
+
+        {candidates.length === 0 ? (
+          <div className="mx-6 mt-6 rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요.</div>
+        ) : (
+          <>
+            <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {candidates.map((place, index) => (
+                <div key={place.id} className="w-[82vw] max-w-[340px] shrink-0 snap-center">
+                  <div className="mb-3 flex items-center justify-between px-1">
+                    <span className="text-xs font-black text-zinc-300">후보 {index + 1}</span>
+                    <span className="rounded-full bg-zinc-50 px-3 py-1 text-xs font-bold text-zinc-500">옆으로 넘겨보기</span>
+                  </div>
+                  <PlaceCard place={place} reason={buildPlaceReason(place, preference, today)} onSelect={() => selectPlace(place)} cta="이걸로 할래요" />
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-1">
+              {candidates.map((place) => (
+                <span key={place.id} className="h-1.5 w-1.5 rounded-full bg-rose-200" />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
-      <div className="mt-6">
+      <div className="mt-6 px-6">
         <BottomButton onClick={refresh} disabled={candidates.length === 0}>
           {current.refresh}
         </BottomButton>
