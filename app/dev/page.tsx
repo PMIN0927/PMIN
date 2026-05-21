@@ -61,6 +61,16 @@ export default function DevPage() {
     [customPlaces]
   );
 
+  const deletedItems = useMemo(
+    () =>
+      deletedPlaces.map((place) => ({
+        id: place.id,
+        name: place.name,
+        role: place.role
+      })),
+    [deletedPlaces]
+  );
+
   const unlock = () => {
     if (password.trim() !== DEV_PASSWORD) {
       setPasswordError("비밀번호가 달라요.");
@@ -235,6 +245,9 @@ export default function DevPage() {
           </button>
           <button onClick={() => copyJson(customItems, "추가 카드")} disabled={customItems.length === 0} className="mt-3 w-full rounded-[22px] bg-zinc-100 px-5 py-4 text-sm font-black text-zinc-700 disabled:text-zinc-400">
             {copiedText === "추가 카드" ? "추가 카드 복사 완료" : "추가 카드 복사하기"}
+          </button>
+          <button onClick={() => copyJson(deletedItems, "삭제 카드")} disabled={deletedItems.length === 0} className="mt-3 w-full rounded-[22px] bg-red-50 px-5 py-4 text-sm font-black text-red-600 disabled:text-zinc-400">
+            {copiedText === "삭제 카드" ? "삭제/숨김 목록 복사 완료" : "삭제/숨김 목록 복사하기"}
           </button>
 
           {overrideItems.length > 0 && (
