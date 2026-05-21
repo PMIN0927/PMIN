@@ -26,7 +26,7 @@ export function scorePlace(place: Place, role: string, preference: UserPreferenc
   const userTokens = tokenizeUserText(today.situationText);
   const situationTags = parseSituationTags(today.situationText);
   const preferenceTokens = [...preference.foods, ...preference.moods, ...preference.dateStyles];
-  const avoidTokens = [...preference.dislikes, ...avoidWordsFromText(today.situationText)];
+  const avoidTokens = [...preference.dislikes, ...avoidWordsFromText(today.situationText), ...tagsToAvoids(situationTags)];
   const allPlaceTokens = [
     place.name,
     place.role,
@@ -45,6 +45,10 @@ export function scorePlace(place: Place, role: string, preference: UserPreferenc
   ];
   const searchable = allPlaceTokens.join(" ").toLowerCase();
 
+  if (avoidTokens.includes("술집") && (role === "술" || /술|술집|이자카야|하이볼|맥주|소주|와인|포차|주점|바/.test(searchable))) {
+    return -999;
+  }
+
   let score = 30;
   score += budgetScore(today.budget, place);
   score += overlapScore(place.situationKeywords || [], situationTags, 8, 32);
@@ -57,6 +61,8 @@ export function scorePlace(place: Place, role: string, preference: UserPreferenc
   if (avoidTokens.includes("웨이팅") && searchable.includes("웨이팅")) score -= 25;
   if (avoidTokens.includes("시끄러운 곳") && /활기찬|소음|고기|곱창|포차|술집/.test(searchable)) score -= 25;
   if (avoidTokens.includes("많이 걷기") && (!place.latitude || !place.longitude)) score -= 10;
+  if (avoidTokens.includes("카페") && role === "카페") score -= 80;
+  if (avoidTokens.includes("사진") && /포토|사진|스튜디오|인생네컷/.test(searchable)) score -= 80;
 
   if (situationTags.includes("조용한대화") && /카페|다이닝|디저트|깔끔|조용/.test(searchable)) score += 15;
   if (situationTags.includes("술데이트") && role === "술") score += 20;
@@ -75,12 +81,12 @@ export function pickCandidates(
   blockedIds = new Set<string>(),
   count = 3
 ) {
-  const ranked = places
+  return places
     .map((place) => ({ place, score: scorePlace(place, role, preference, today, blockedIds) }))
     .filter((item) => item.score > -20)
-    .sort((a, b) => b.score - a.score || a.place.name.localeCompare(b.place.name, "ko"));
-
-  return ranked.slice(0, count).map((item) => item.place);
+    .sort((a, b) => b.score - a.score || a.place.name.localeCompare(b.place.name, "ko"))
+    .slice(0, count)
+    .map((item) => item.place);
 }
 
 export function recommendWaypoints(places: Place[], selection: CourseSelection, preference?: UserPreference, today?: TodayCondition) {
@@ -122,45 +128,29 @@ export function makeAutoCourse(places: Place[], preference: UserPreference, toda
   const meal = pickCandidates(places, "식사", preference, today, new Set(), 1)[0];
   const blocked = new Set([meal?.id || ""]);
   const tags = parseSituationTags(today.situationText);
-  const wantsDrink = tags.includes("술데이트") || /술|한잔|맥주|하이볼|와인/.test(today.situationText);
+  const excludesDrink = tags.includes("술제외") || tags.includes("술집제외") || tags.includes("논알콜");
+  const wantsDrink = !excludesDrink && (tags.includes("술데이트") || /술\s*한잔|한잔|맥주|하이볼|와인/.test(today.situationText));
   const cafe = wantsDrink ? undefined : pickCandidates(places, "카페", preference, today, blocked, 1)[0];
   if (cafe) blocked.add(cafe.id);
-  const bar = pickCandidates(places, "술", preference, today, blocked, 1)[0];
+  const bar = excludesDrink ? undefined : pickCandidates(places, "술", preference, today, blocked, 1)[0];
   return makeCourseFromSelection({ meal, cafe, bar }, places, preference, today);
+}
+
+function tagsToAvoids(tags: string[]) {
+  const avoids: string[] = [];
+  if (tags.includes("술제외") || tags.includes("술집제외") || tags.includes("논알콜")) avoids.push("술집");
+  if (tags.includes("카페제외")) avoids.push("카페");
+  if (tags.includes("사진제외")) avoids.push("사진");
+  return avoids;
 }
 
 function budgetScore(budget: string, place: Place) {
   const tier = place.priceTier || "확인필요";
   if (!budget || budget.includes("제한")) return tier === "확인필요" ? -4 : 6;
-
-  if (budget.includes("1만원")) {
-    if (tier === "저예산") return 45;
-    if (tier === "보통") return -45;
-    if (tier === "높음") return -90;
-    return -30;
-  }
-
-  if (budget.includes("2만원")) {
-    if (tier === "저예산") return 35;
-    if (tier === "보통") return 8;
-    if (tier === "높음") return -60;
-    return -12;
-  }
-
-  if (budget.includes("3만원")) {
-    if (tier === "저예산") return 18;
-    if (tier === "보통") return 20;
-    if (tier === "높음") return -35;
-    return -4;
-  }
-
-  if (budget.includes("5만원")) {
-    if (tier === "높음") return 10;
-    if (tier === "보통") return 18;
-    if (tier === "저예산") return 10;
-    return -2;
-  }
-
+  if (budget.includes("1만원")) return tier === "저예산" ? 45 : tier === "보통" ? -45 : tier === "높음" ? -90 : -30;
+  if (budget.includes("2만원")) return tier === "저예산" ? 35 : tier === "보통" ? 8 : tier === "높음" ? -60 : -12;
+  if (budget.includes("3만원")) return tier === "저예산" ? 18 : tier === "보통" ? 20 : tier === "높음" ? -35 : -4;
+  if (budget.includes("5만원")) return tier === "높음" ? 10 : tier === "보통" ? 18 : tier === "저예산" ? 10 : -2;
   return 0;
 }
 
