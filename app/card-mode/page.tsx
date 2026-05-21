@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import BottomButton from "@/components/BottomButton";
@@ -7,13 +8,20 @@ import LoadingScreen from "@/components/LoadingScreen";
 import PlaceCard from "@/components/PlaceCard";
 import { loadPlaces } from "@/lib/loadPlaces";
 import { buildPlaceReason } from "@/lib/recommendReason";
-import { loadPreference, loadTodayCondition, saveCourse } from "@/lib/storage";
 import { makeCourseFromSelection, pickCandidates } from "@/lib/recommender";
+import { loadPreference, loadTodayCondition, saveCourse } from "@/lib/storage";
 import type { Place } from "@/types/place";
 
 type StepKey = "meal" | "cafe" | "bar";
 
-const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: string; refresh: string; helper: string; loading: string }> = [
+const steps: Array<{
+  key: StepKey;
+  role: "식사" | "카페" | "술";
+  title: string;
+  refresh: string;
+  helper: string;
+  loading: string;
+}> = [
   {
     key: "meal",
     role: "식사",
@@ -35,7 +43,7 @@ const steps: Array<{ key: StepKey; role: "식사" | "카페" | "술"; title: str
     role: "술",
     title: "마지막으로 한잔할 곳을 골라볼까요?",
     refresh: "다른 술집 후보 보기",
-    helper: "오늘 분위기를 이어가기 좋은 술집 후보예요.",
+    helper: "오늘 분위기를 이어가기 좋은 술집 후보예요. 술이 싫다고 적었다면 자동으로 낮게 잡혀요.",
     loading: "술집 후보를 다시 고르는 중이에요"
   }
 ];
@@ -54,10 +62,7 @@ export default function CardModePage() {
   const current = steps[stepIndex];
   const selectedIds = [selection.meal?.id, selection.cafe?.id, selection.bar?.id].filter(Boolean) as string[];
   const blockedIds = new Set([...blockedIdsByStep[current.key], ...selectedIds]);
-  const candidates = useMemo(
-    () => pickCandidates(places, current.role, preference, today, blockedIds, 3),
-    [places, current.role, preference, today, blockedIdsByStep, selection]
-  );
+  const candidates = useMemo(() => pickCandidates(places, current.role, preference, today, blockedIds, 3), [places, current.role, preference, today, blockedIdsByStep, selection]);
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
 
   const waitThen = (title: string, next: () => void) => {
@@ -83,6 +88,7 @@ export default function CardModePage() {
       waitThen(steps[stepIndex + 1].loading, () => setStepIndex(stepIndex + 1));
       return;
     }
+
     waitThen("선택한 장소로 코스를 만드는 중이에요", () => {
       const course = makeCourseFromSelection(nextSelection, places, preference, today);
       saveCourse(course);
@@ -95,6 +101,8 @@ export default function CardModePage() {
     setSelection(next);
     finishOrNext(next);
   };
+
+  const skipStep = () => selectPlace(undefined);
 
   if (isLoading) {
     return <LoadingScreen title={loadingText} description="잠깐만요. 취향과 오늘 상황에 맞는 다음 후보를 정리하고 있어요." />;
@@ -130,7 +138,25 @@ export default function CardModePage() {
         </div>
 
         {candidates.length === 0 ? (
-          <div className="mx-6 mt-6 rounded-[1.75rem] bg-zinc-50 p-6 text-center text-zinc-500">더 이상 후보가 없어요.</div>
+          <div className="mx-6 mt-6 rounded-[1.75rem] border border-rose-100 bg-roseSoft p-6 text-center">
+            <p className="text-4xl">🔎</p>
+            <h2 className="mt-4 text-xl font-black text-ink">조건을 조금 완화해볼까요?</h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-500">지금 입력한 분위기, 시간, 피하고 싶은 조건을 모두 반영하니 {current.role} 후보가 부족해졌어요.</p>
+            <div className="mt-5 grid gap-2">
+              <button onClick={refresh} className="rounded-2xl bg-white px-4 py-3 text-sm font-black text-rose-700 shadow-sm">
+                다른 후보 다시 찾기
+              </button>
+              {current.key !== "meal" ? (
+                <button onClick={skipStep} className="rounded-2xl bg-ink px-4 py-3 text-sm font-black text-white">
+                  이 단계는 건너뛰기
+                </button>
+              ) : (
+                <Link href="/today" className="rounded-2xl bg-ink px-4 py-3 text-sm font-black text-white">
+                  오늘 상황 다시 입력하기
+                </Link>
+              )}
+            </div>
+          </div>
         ) : (
           <>
             <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

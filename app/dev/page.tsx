@@ -2,11 +2,13 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { saveCustomPlace, type CustomPlaceInput } from "@/lib/customPlaces";
+import { loadCustomPlaces, saveCustomPlace, type CustomPlaceInput } from "@/lib/customPlaces";
 import { loadPlaces } from "@/lib/loadPlaces";
 import { getEffectiveRole } from "@/lib/placeRole";
 import { loadRoleOverrides, removeRoleOverride, roleOptions, saveRoleOverride, type EditableRole } from "@/lib/roleOverrides";
 import type { Place } from "@/types/place";
+
+const DEV_PASSWORD = "0927";
 
 const emptyForm: CustomPlaceInput = {
   name: "",
@@ -18,24 +20,53 @@ const emptyForm: CustomPlaceInput = {
 };
 
 export default function DevPage() {
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && sessionStorage.getItem("devUnlocked") === "true");
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [selectedRole, setSelectedRole] = useState<EditableRole | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [form, setForm] = useState<CustomPlaceInput>(emptyForm);
   const [version, setVersion] = useState(0);
-  const [copied, setCopied] = useState(false);
+  const [copiedText, setCopiedText] = useState("");
+
   const places = useMemo(loadPlaces, [version]);
   const overrides = useMemo(loadRoleOverrides, [version]);
+  const customPlaces = useMemo(loadCustomPlaces, [version]);
   const filtered = selectedRole ? places.filter((place) => getEffectiveRole(place) === selectedRole) : [];
+
   const overrideItems = useMemo(
     () =>
       Object.entries(overrides)
         .map(([id, role]) => {
           const place = places.find((item) => item.id === id);
-          return place ? { id, name: place.name, role } : { id, name: "알 수 없는 장소", role };
+          return place ? { id, name: place.name, role } : { id, name: "찾을 수 없는 장소", role };
         })
         .sort((a, b) => a.name.localeCompare(b.name, "ko")),
     [overrides, places]
   );
+
+  const customItems = useMemo(
+    () =>
+      customPlaces.map((place) => ({
+        id: place.id,
+        name: place.name,
+        role: place.role,
+        category: place.category,
+        description: place.description,
+        naverMapUrl: place.naverMapUrl,
+        openingHours: place.openingHours
+      })),
+    [customPlaces]
+  );
+
+  const unlock = () => {
+    if (password.trim() !== DEV_PASSWORD) {
+      setPasswordError("비밀번호가 달라요.");
+      return;
+    }
+    sessionStorage.setItem("devUnlocked", "true");
+    setUnlocked(true);
+  };
 
   const changeRole = (place: Place, role: EditableRole) => {
     saveRoleOverride(place.id, role);
@@ -47,11 +78,10 @@ export default function DevPage() {
     setVersion((value) => value + 1);
   };
 
-  const copyOverrides = async () => {
-    const text = JSON.stringify(overrideItems, null, 2);
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1600);
+  const copyJson = async (items: unknown[], label: string) => {
+    await navigator.clipboard.writeText(JSON.stringify(items, null, 2));
+    setCopiedText(label);
+    window.setTimeout(() => setCopiedText(""), 1600);
   };
 
   const addPlace = () => {
@@ -74,6 +104,48 @@ export default function DevPage() {
     });
   };
 
+  if (!unlocked) {
+    return (
+      <main className="flex min-h-screen flex-col bg-white px-6 py-8 safe-bottom">
+        <header className="flex items-center justify-between">
+          <Link href="/" className="rounded-full bg-zinc-50 px-4 py-2 text-sm font-black text-zinc-500">
+            닫기
+          </Link>
+          <p className="text-sm font-black text-ink">오늘 뭐해?</p>
+          <span className="w-[58px]" />
+        </header>
+
+        <section className="m-auto w-full max-w-sm rounded-[32px] border border-zinc-100 bg-white p-6 shadow-card">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-roseApp">Developer Mode</p>
+          <h1 className="mt-3 text-2xl font-black leading-tight text-ink">관리자만 들어갈 수 있어요</h1>
+          <p className="mt-3 text-sm leading-6 text-zinc-500">가게 장르를 바꾸거나 새 카드를 추가하는 화면이라 비밀번호를 걸어뒀어요.</p>
+
+          <form
+            className="mt-6 space-y-3"
+            onSubmit={(event) => {
+              event.preventDefault();
+              unlock();
+            }}
+          >
+            <input
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+                setPasswordError("");
+              }}
+              type="password"
+              inputMode="numeric"
+              placeholder="비밀번호"
+              className="w-full rounded-2xl bg-zinc-50 px-4 py-4 text-base font-black outline-none focus:ring-2 focus:ring-roseApp/40"
+            />
+            {passwordError && <p className="text-sm font-bold text-roseApp">{passwordError}</p>}
+            <button className="w-full rounded-2xl bg-roseApp px-5 py-4 text-sm font-black text-white">들어가기</button>
+          </form>
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-white px-5 py-6 safe-bottom">
       <header className="flex items-center justify-between">
@@ -88,7 +160,9 @@ export default function DevPage() {
 
       {!selectedRole ? (
         <section className="mt-8">
-          <p className="text-sm leading-6 text-zinc-500">검수할 장르를 선택하세요. 여기서 바꾼 장르는 이 브라우저에 저장되고 추천에도 바로 반영돼요.</p>
+          <p className="text-sm leading-6 text-zinc-500">
+            장르를 직접 고치면 이 브라우저에서는 추천 화면에 바로 반영돼요. 다른 사람에게도 적용하려면 아래 복사 버튼으로 내용을 받아서 DB에 반영해야 해요.
+          </p>
 
           <button onClick={() => setShowAddForm((value) => !value)} className="mt-5 w-full rounded-[22px] bg-roseApp px-5 py-4 text-sm font-black text-white">
             카드 추가하기
@@ -110,7 +184,7 @@ export default function DevPage() {
                 <input value={form.description} onChange={(event) => setForm({ ...form, description: event.target.value })} placeholder="설명 예: 조용한 초밥집" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
                 <input value={form.naverMapUrl} onChange={(event) => setForm({ ...form, naverMapUrl: event.target.value })} placeholder="네이버 지도 링크" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
                 <button type="button" onClick={fillFromNaverLink} className="w-full rounded-2xl bg-roseSoft px-4 py-3 text-sm font-black text-rose-700">
-                  네이버 링크로 자동 채우기
+                  네이버 검색 링크로 기본값 채우기
                 </button>
                 <input value={form.openingHours} onChange={(event) => setForm({ ...form, openingHours: event.target.value })} placeholder="운영시간 예: 11:00~22:00" className="w-full rounded-2xl bg-zinc-50 p-3 text-sm font-bold outline-none" />
               </div>
@@ -133,14 +207,17 @@ export default function DevPage() {
             })}
           </div>
 
-          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">현재 수동 변경: {Object.keys(overrides).length}개</div>
-          <button onClick={copyOverrides} disabled={overrideItems.length === 0} className="mt-3 w-full rounded-[22px] bg-ink px-5 py-4 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
-            {copied ? "수정 내역 복사 완료" : "수정 내역 복사하기"}
+          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">현재 수동 장르 변경 {Object.keys(overrides).length}개, 직접 추가 카드 {customPlaces.length}개</div>
+          <button onClick={() => copyJson(overrideItems, "수정 이력")} disabled={overrideItems.length === 0} className="mt-3 w-full rounded-[22px] bg-ink px-5 py-4 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
+            {copiedText === "수정 이력" ? "수정 이력 복사 완료" : "수정 이력 복사하기"}
+          </button>
+          <button onClick={() => copyJson(customItems, "추가 카드")} disabled={customItems.length === 0} className="mt-3 w-full rounded-[22px] bg-zinc-100 px-5 py-4 text-sm font-black text-zinc-700 disabled:text-zinc-400">
+            {copiedText === "추가 카드" ? "추가 카드 복사 완료" : "추가 카드 복사하기"}
           </button>
 
           {overrideItems.length > 0 && (
             <div className="mt-3 rounded-[22px] bg-zinc-50 p-4">
-              <p className="text-xs font-black text-zinc-400">최근 수정 내역</p>
+              <p className="text-xs font-black text-zinc-400">최근 수정 이력</p>
               <div className="mt-2 max-h-40 space-y-1 overflow-auto text-xs leading-5 text-zinc-600">
                 {overrideItems.map((item) => (
                   <p key={item.id}>
@@ -154,7 +231,7 @@ export default function DevPage() {
       ) : (
         <section className="mt-7">
           <button onClick={() => setSelectedRole(null)} className="rounded-full bg-zinc-50 px-4 py-2 text-sm font-black text-zinc-500">
-            ← 장르 다시 선택
+            장르 다시 선택
           </button>
           <div className="mt-5">
             <p className="text-sm font-black text-roseApp">{selectedRole}</p>
@@ -216,15 +293,14 @@ function roleEmoji(role: string) {
   if (role === "식사") return "🍽️";
   if (role === "술") return "🍻";
   if (role === "카페") return "☕";
-  if (role === "중간경유지") return "📸";
-  return "💗";
+  if (role === "중간경유지") return "🎯";
+  return "📍";
 }
 
 function inferFromNaverMapUrl(url: string): CustomPlaceInput | null {
   const query = extractSearchQuery(url);
   if (!query) return null;
   const name = query.replace(/\s*부산진구\s*/g, " ").replace(/\s+/g, " ").trim();
-  const text = name.toLowerCase();
 
   if (/카페|커피|디저트|베이커리|빙수|찻집/.test(name)) {
     return {
@@ -259,11 +335,12 @@ function inferFromNaverMapUrl(url: string): CustomPlaceInput | null {
     };
   }
 
+  const foodCategory = inferFoodCategory(name);
   return {
     name,
     role: "식사",
-    category: inferFoodCategory(name, text),
-    description: `${inferFoodCategory(name, text)} 계열 식사 장소`,
+    category: foodCategory,
+    description: `${foodCategory} 계열 식사 장소`,
     naverMapUrl: url,
     openingHours: ""
   };
@@ -273,20 +350,19 @@ function extractSearchQuery(url: string) {
   try {
     const decodedUrl = decodeURIComponent(url);
     const match = decodedUrl.match(/\/search\/([^/?#]+)/);
-    if (match?.[1]) return match[1].trim();
+    return match?.[1]?.trim() || null;
   } catch {
     return null;
   }
-  return null;
 }
 
-function inferFoodCategory(name: string, text: string) {
+function inferFoodCategory(name: string) {
   if (/초밥|스시|라멘|우동|돈까스|돈카츠|규카츠|일식/.test(name)) return "일식";
   if (/파스타|피자|스테이크|양식|브런치/.test(name)) return "양식";
   if (/마라|짬뽕|중식|양꼬치|훠궈/.test(name)) return "중식";
   if (/고기|곱창|막창|구이|삼겹|갈비/.test(name)) return "고기";
   if (/샤브/.test(name)) return "샤브샤브";
-  if (/국밥|칼국수|밀면|한식|순두부|백반/.test(name)) return "한식";
-  if (/버거|치킨/.test(text)) return "버거/치킨";
+  if (/국밥|칼국수|밥|한식|순두부|백반/.test(name)) return "한식";
+  if (/버거|치킨/.test(name)) return "버거/치킨";
   return "식사";
 }

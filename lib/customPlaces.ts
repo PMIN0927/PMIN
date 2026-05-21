@@ -24,9 +24,9 @@ export function loadCustomPlaces(): Place[] {
 export function saveCustomPlace(input: CustomPlaceInput) {
   if (typeof window === "undefined") return;
   const places = loadCustomPlaces();
-  const now = Date.now();
+  const hours = input.openingHours.trim() || "방문 전 확인 필요";
   const place: Place = {
-    id: `custom-${now}`,
+    id: `custom-${Date.now()}`,
     name: input.name.trim(),
     role: input.role,
     category: input.category.trim() || input.role,
@@ -37,16 +37,16 @@ export function saveCustomPlace(input: CustomPlaceInput) {
     menu3: "",
     naverMapUrl: input.naverMapUrl.trim(),
     kakaoMapUrl: "",
-    openingHours: input.openingHours.trim() || "방문 전 확인 필요",
+    openingHours: hours,
     holiday: "방문 전 확인 필요",
     weeklyHours: {
-      월: input.openingHours.trim() || "방문 전 확인 필요",
-      화: input.openingHours.trim() || "방문 전 확인 필요",
-      수: input.openingHours.trim() || "방문 전 확인 필요",
-      목: input.openingHours.trim() || "방문 전 확인 필요",
-      금: input.openingHours.trim() || "방문 전 확인 필요",
-      토: input.openingHours.trim() || "방문 전 확인 필요",
-      일: input.openingHours.trim() || "방문 전 확인 필요"
+      월: hours,
+      화: hours,
+      수: hours,
+      목: hours,
+      금: hours,
+      토: hours,
+      일: hours
     },
     latitude: null,
     longitude: null,
