@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { loadCustomPlaces, saveCustomPlace, type CustomPlaceInput } from "@/lib/customPlaces";
+import { loadCustomPlaces, removeCustomPlace, saveCustomPlace, type CustomPlaceInput } from "@/lib/customPlaces";
+import { hidePlace, loadDeletedPlaces, restorePlace } from "@/lib/deletedPlaces";
 import { loadPlaces } from "@/lib/loadPlaces";
 import { getEffectiveRole } from "@/lib/placeRole";
 import { loadRoleOverrides, removeRoleOverride, roleOptions, saveRoleOverride, type EditableRole } from "@/lib/roleOverrides";
@@ -32,6 +33,7 @@ export default function DevPage() {
   const places = useMemo(loadPlaces, [version]);
   const overrides = useMemo(loadRoleOverrides, [version]);
   const customPlaces = useMemo(loadCustomPlaces, [version]);
+  const deletedPlaces = useMemo(loadDeletedPlaces, [version]);
   const filtered = selectedRole ? places.filter((place) => getEffectiveRole(place) === selectedRole) : [];
 
   const overrideItems = useMemo(
@@ -75,6 +77,24 @@ export default function DevPage() {
 
   const resetRole = (place: Place) => {
     removeRoleOverride(place.id);
+    setVersion((value) => value + 1);
+  };
+
+  const deletePlace = (place: Place) => {
+    const ok = window.confirm(`${place.name} 카드를 삭제할까요? 기본 DB 카드는 숨김 처리되고, 직접 추가한 카드는 이 브라우저에서 삭제돼요.`);
+    if (!ok) return;
+
+    if (place.id.startsWith("custom-")) {
+      removeCustomPlace(place.id);
+    } else {
+      hidePlace(place);
+    }
+    removeRoleOverride(place.id);
+    setVersion((value) => value + 1);
+  };
+
+  const restoreDeletedPlace = (placeId: string) => {
+    restorePlace(placeId);
     setVersion((value) => value + 1);
   };
 
@@ -207,7 +227,9 @@ export default function DevPage() {
             })}
           </div>
 
-          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">현재 수동 장르 변경 {Object.keys(overrides).length}개, 직접 추가 카드 {customPlaces.length}개</div>
+          <div className="mt-6 rounded-[24px] bg-roseSoft p-4 text-sm font-bold leading-6 text-rose-700">
+            현재 수동 장르 변경 {Object.keys(overrides).length}개, 직접 추가 카드 {customPlaces.length}개, 삭제/숨김 카드 {deletedPlaces.length}개
+          </div>
           <button onClick={() => copyJson(overrideItems, "수정 이력")} disabled={overrideItems.length === 0} className="mt-3 w-full rounded-[22px] bg-ink px-5 py-4 text-sm font-black text-white disabled:bg-zinc-200 disabled:text-zinc-400">
             {copiedText === "수정 이력" ? "수정 이력 복사 완료" : "수정 이력 복사하기"}
           </button>
@@ -227,6 +249,25 @@ export default function DevPage() {
               </div>
             </div>
           )}
+
+          {deletedPlaces.length > 0 && (
+            <div className="mt-4 rounded-[22px] bg-zinc-50 p-4">
+              <p className="text-xs font-black text-zinc-400">삭제/숨김 카드</p>
+              <div className="mt-3 space-y-2">
+                {deletedPlaces.map((place) => (
+                  <div key={place.id} className="flex items-center justify-between gap-3 rounded-2xl bg-white px-3 py-3 shadow-sm">
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-black text-ink">{place.name}</p>
+                      <p className="text-xs font-bold text-zinc-400">{place.role || "역할 없음"}</p>
+                    </div>
+                    <button onClick={() => restoreDeletedPlace(place.id)} className="shrink-0 rounded-full bg-roseSoft px-3 py-2 text-xs font-black text-rose-700">
+                      복원
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       ) : (
         <section className="mt-7">
@@ -240,7 +281,7 @@ export default function DevPage() {
 
           <div className="mt-5 space-y-4">
             {filtered.map((place) => (
-              <DevPlaceCard key={place.id} place={place} isManual={Boolean(overrides[place.id])} onChangeRole={(role) => changeRole(place, role)} onReset={() => resetRole(place)} />
+              <DevPlaceCard key={place.id} place={place} isManual={Boolean(overrides[place.id])} onChangeRole={(role) => changeRole(place, role)} onReset={() => resetRole(place)} onDelete={() => deletePlace(place)} />
             ))}
           </div>
         </section>
@@ -251,7 +292,19 @@ export default function DevPage() {
   );
 }
 
-function DevPlaceCard({ place, isManual, onChangeRole, onReset }: { place: Place; isManual: boolean; onChangeRole: (role: EditableRole) => void; onReset: () => void }) {
+function DevPlaceCard({
+  place,
+  isManual,
+  onChangeRole,
+  onReset,
+  onDelete
+}: {
+  place: Place;
+  isManual: boolean;
+  onChangeRole: (role: EditableRole) => void;
+  onReset: () => void;
+  onDelete: () => void;
+}) {
   const role = getEffectiveRole(place);
   const mapUrl = place.naverMapUrl || place.kakaoMapUrl;
 
@@ -285,6 +338,10 @@ function DevPlaceCard({ place, isManual, onChangeRole, onReset }: { place: Place
           원래 DB 기준으로 되돌리기
         </button>
       )}
+
+      <button onClick={onDelete} className="mt-3 w-full rounded-2xl bg-red-50 px-4 py-3 text-sm font-black text-red-600">
+        카드 삭제하기
+      </button>
     </article>
   );
 }

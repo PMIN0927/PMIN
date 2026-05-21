@@ -60,3 +60,9 @@ export function saveCustomPlace(input: CustomPlaceInput) {
 
   localStorage.setItem(key, JSON.stringify([...places, place]));
 }
+
+export function removeCustomPlace(placeId: string) {
+  if (typeof window === "undefined") return;
+  const places = loadCustomPlaces().filter((place) => place.id !== placeId);
+  localStorage.setItem(key, JSON.stringify(places));
+}
